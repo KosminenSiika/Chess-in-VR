@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 755cc42924042f5479613e4865a05d31
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - blackBishopPrefab: {instanceID: 0}
+  - blackKingPrefab: {instanceID: 0}
+  - blackKnightPrefab: {instanceID: 0}
+  - blackPawnPrefab: {instanceID: 0}
+  - blackQueenPrefab: {instanceID: 0}
+  - blackRookPrefab: {instanceID: 0}
+  - whiteBishopPrefab: {instanceID: 0}
+  - whiteKingPrefab: {instanceID: 0}
+  - whiteKnightPrefab: {instanceID: 0}
+  - whitePawnPrefab: {instanceID: 0}
+  - whiteQueenPrefab: {instanceID: 0}
+  - whiteRookPrefab: {instanceID: 0}
+  - pieceOnTop: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

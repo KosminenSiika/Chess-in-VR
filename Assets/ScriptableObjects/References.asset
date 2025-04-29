@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecf32eb61497c545bbc9b3db276dd6a, type: 3}
+  m_Name: References
+  m_EditorClassIdentifier: 
+  blackBishopPrefab: {fileID: 3891770105789152158, guid: f9232f2950936414991dd2b2674c8527, type: 3}
+  blackKingPrefab: {fileID: 1427549462978338592, guid: 211c64b011ba434449f7264683ff6a85, type: 3}
+  blackKnightPrefab: {fileID: 1969046729191599518, guid: 16e9c60f09d99ab44a5992ed3c85e751, type: 3}
+  blackPawnPrefab: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
+  blackQueenPrefab: {fileID: 2980219975935681472, guid: 1beff7da3239fa84dafaf4c63efc3858, type: 3}
+  blackRookPrefab: {fileID: 3305482362731247271, guid: 31b0ed501338f0848be56f56ccab64df, type: 3}
+  whiteBishopPrefab: {fileID: 3891770105789152158, guid: e9965b19e67c6a4439118d7ddd9e0042, type: 3}
+  whiteKingPrefab: {fileID: 1427549462978338592, guid: 1a4308b797c8fa94cac779a31b2683e9, type: 3}
+  whiteKnightPrefab: {fileID: 1969046729191599518, guid: 88c43c1107d467141830e089552e9997, type: 3}
+  whitePawnPrefab: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
+  whiteQueenPrefab: {fileID: 2980219975935681472, guid: 699073d1ad5818046af2fbfeb7bc80fb, type: 3}
+  whiteRookPrefab: {fileID: 3305482362731247271, guid: d069a6b05175ea84f920abc50ef06754, type: 3}
