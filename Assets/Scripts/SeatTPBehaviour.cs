@@ -21,7 +21,7 @@ public class SeatTPBehaviour : MonoBehaviour
 
         moveProvider.enabled = false;
         turnProvider.enabled = false;
-        characterControllerDriver.enabled = false;
+        //characterControllerDriver.enabled = false;
         characterController.enabled = false;
     }
 
@@ -33,7 +33,7 @@ public class SeatTPBehaviour : MonoBehaviour
         moveProvider.enabled = true;
         turnProvider.enabled = true;
         characterController.enabled = true;
-        characterControllerDriver.enabled = true;
+        //characterControllerDriver.enabled = true;
     }
 
 

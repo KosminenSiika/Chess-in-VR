@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class ChessboardSquare : MonoBehaviour
 {
     [SerializeField] private ReferencesSO referencesSO;
+    [SerializeField] private Chessboard chessboard;
 
     public int X { get { return x; } private set { x = value; } }
     public int Y { get { return y; } private set { y = value; } }
@@ -95,6 +96,7 @@ public class ChessboardSquare : MonoBehaviour
             GameObject instantiatedPiece = Instantiate(pieceToInstantiate, placePiecePos, transform.localRotation);
             pieceOnTop = instantiatedPiece.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
+            pieceOnTop.chessboard = chessboard;
         }
     }
 
