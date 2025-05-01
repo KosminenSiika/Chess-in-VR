@@ -119,7 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 3
+  x: 4
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &125776212845093632
@@ -280,7 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 45
+  x: 6
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &207433157690700097
@@ -402,7 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 20
+  x: 5
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &245984417025904989
@@ -524,7 +527,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 51
+  x: 4
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &294617506881784255
@@ -685,7 +689,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 26
+  x: 3
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &689231299893802214
@@ -807,7 +812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 4
+  x: 5
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &689275855198184940
@@ -929,7 +935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 40
+  x: 1
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &720321359829288578
@@ -1051,7 +1058,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 54
+  x: 7
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &777534160510797164
@@ -1173,7 +1181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 10
+  x: 3
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &787704917892866408
@@ -1295,7 +1304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 23
+  x: 8
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1029575510322899178
@@ -1417,7 +1427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 13
+  x: 6
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1147822424197449255
@@ -1539,7 +1550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 60
+  x: 5
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1330180810725222087
@@ -1661,7 +1673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 59
+  x: 4
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1451395571443691046
@@ -1783,7 +1796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 56
+  x: 1
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1457651090567631782
@@ -1905,7 +1919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 30
+  x: 7
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1510395272608252126
@@ -2027,7 +2042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 15
+  x: 8
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1710948358290851755
@@ -2149,7 +2165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 6
+  x: 7
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1906699618059009882
@@ -2310,7 +2327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 29
+  x: 6
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2415853316677622232
@@ -2432,7 +2450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 1
+  x: 2
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2460975442642665246
@@ -2554,7 +2573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 48
+  x: 1
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2574036831741356912
@@ -2676,7 +2696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 16
+  x: 1
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2617772631404829318
@@ -2798,7 +2819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 55
+  x: 8
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2651972235889412314
@@ -2920,7 +2942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 42
+  x: 3
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2967187623479203986
@@ -3042,7 +3065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 52
+  x: 5
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3344316791805348457
@@ -3277,7 +3301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 7
+  x: 8
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3573297397235768671
@@ -3438,7 +3463,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 14
+  x: 7
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3631929485986155648
@@ -3560,7 +3586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 36
+  x: 5
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3681623923813718694
@@ -3682,7 +3709,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 49
+  x: 2
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3852571736152401336
@@ -3804,7 +3832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 41
+  x: 2
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3913018897353592028
@@ -3926,7 +3955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 39
+  x: 8
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4095640517386561142
@@ -4048,7 +4078,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 24
+  x: 1
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4122247947247824266
@@ -4170,7 +4201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 0
+  x: 1
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4435034638240799711
@@ -4292,7 +4324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 17
+  x: 2
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4692238145250121579
@@ -4414,7 +4447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 58
+  x: 3
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4699973298891136319
@@ -4536,7 +4570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 31
+  x: 8
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4808182059530328362
@@ -4658,7 +4693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 27
+  x: 4
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4861706454866283231
@@ -4780,7 +4816,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 61
+  x: 6
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5085536266054582401
@@ -4902,7 +4939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 62
+  x: 7
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5212362472557071724
@@ -5024,7 +5062,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 63
+  x: 8
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5268372103960111598
@@ -5185,7 +5224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 25
+  x: 2
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5399223822923715979
@@ -5346,7 +5386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 5
+  x: 6
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5508127486070184383
@@ -5468,7 +5509,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 33
+  x: 2
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5767115065803300982
@@ -5590,7 +5632,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 21
+  x: 6
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5832543657126023514
@@ -5751,7 +5794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 8
+  x: 1
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6207993854866741172
@@ -5905,7 +5949,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 46
+  x: 7
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6415064934306211006
@@ -6027,7 +6072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 34
+  x: 3
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6563362837645416141
@@ -6149,7 +6195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 53
+  x: 6
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6585752904142188445
@@ -6271,7 +6318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 22
+  x: 7
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7080677051883354708
@@ -6393,7 +6441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 12
+  x: 5
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7283268648053466512
@@ -6515,7 +6564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 57
+  x: 2
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7314290346999460307
@@ -6637,7 +6687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 50
+  x: 3
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7383452091111601870
@@ -6759,7 +6810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 32
+  x: 1
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7511119649272373302
@@ -6881,7 +6933,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 43
+  x: 4
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7566674983308249732
@@ -7003,7 +7056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 38
+  x: 7
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7729337186091556450
@@ -7125,7 +7179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 35
+  x: 4
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7803033612965422018
@@ -7247,7 +7302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 11
+  x: 4
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7958597268206952140
@@ -7408,7 +7464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 2
+  x: 3
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8218497836707286802
@@ -7530,7 +7587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 47
+  x: 8
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8295098427494350704
@@ -7652,7 +7710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 9
+  x: 2
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8314235519403653701
@@ -7774,7 +7833,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 19
+  x: 4
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8419078338417743168
@@ -7896,7 +7956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 28
+  x: 5
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8436859428067312084
@@ -7908,6 +7969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6462625730631953539}
+  - component: {fileID: 1059502763880819578}
   m_Layer: 0
   m_Name: Chessboard
   m_TagString: Untagged
@@ -7931,6 +7993,18 @@ Transform:
   - {fileID: 2374977791057560798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059502763880819578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8436859428067312084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6655846bfb456f45a43bbe407d1e3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8621073729657236932
 GameObject:
   m_ObjectHideFlags: 0
@@ -8050,7 +8124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 37
+  x: 6
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8724473632900101104
@@ -8172,7 +8247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 18
+  x: 3
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &9190854151986695643
@@ -8294,6 +8370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
-  squareID: 44
+  x: 5
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055

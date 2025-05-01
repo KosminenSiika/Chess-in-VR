@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3004626160879191450}
-  - component: {fileID: 6798613664789412104}
+  - component: {fileID: 2785590623621101159}
   m_Layer: 0
   m_Name: WhitePawn
   m_TagString: Untagged
@@ -243,7 +243,7 @@ Transform:
   - {fileID: 8025195956295369047}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6798613664789412104
+--- !u!114 &2785590623621101159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,12 +252,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4337530346287138330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f169aa2d9836449478e0b3efcda3c936, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ac8c41a0ee44240bae8fe023064d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousSquare: {fileID: 0}
   currentSquare: {fileID: 0}
-  pieceType: 0
   isWhite: 1
 --- !u!1 &6238645422811520747
 GameObject:

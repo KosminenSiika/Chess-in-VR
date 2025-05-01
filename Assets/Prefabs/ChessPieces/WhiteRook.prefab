@@ -429,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4062244658540639527}
-  - component: {fileID: 2963834485892267265}
+  - component: {fileID: -4796115687799647542}
   m_Layer: 0
   m_Name: WhiteRook
   m_TagString: Untagged
@@ -453,7 +453,7 @@ Transform:
   - {fileID: 9129455462564311530}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2963834485892267265
+--- !u!114 &-4796115687799647542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,12 +462,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3305482362731247271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f169aa2d9836449478e0b3efcda3c936, type: 3}
+  m_Script: {fileID: 11500000, guid: c1be31675f0724f4f8c69a8853c0b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousSquare: {fileID: 0}
   currentSquare: {fileID: 0}
-  pieceType: 1
   isWhite: 1
 --- !u!1 &4510719459601585316
 GameObject:

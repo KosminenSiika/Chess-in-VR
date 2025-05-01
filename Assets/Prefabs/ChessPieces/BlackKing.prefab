@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9199582789414386422}
-  - component: {fileID: 1127344742150055124}
+  - component: {fileID: 7928570897522159122}
   m_Layer: 0
   m_Name: BlackKing
   m_TagString: Untagged
@@ -138,7 +138,7 @@ Transform:
   - {fileID: 5910984403802642562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1127344742150055124
+--- !u!114 &7928570897522159122
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,12 +147,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1427549462978338592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f169aa2d9836449478e0b3efcda3c936, type: 3}
+  m_Script: {fileID: 11500000, guid: 79ee662a43fb77f44b903fae76351421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousSquare: {fileID: 0}
   currentSquare: {fileID: 0}
-  pieceType: 5
   isWhite: 0
 --- !u!1 &1861477581130562887
 GameObject:
