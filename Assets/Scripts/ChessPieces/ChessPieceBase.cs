@@ -79,6 +79,116 @@ public class ChessPieceBase : MonoBehaviour
     {
         List<ChessboardSquare> r = new List<ChessboardSquare>();
 
+        if (pieceType == PieceType.Pawn)
+        {
+            int direction = isWhite ? 1 : -1;
+
+            if (currentSquare.Y + direction >= 1 && currentSquare.Y + direction <= 8)
+            {
+                // One Forward
+                ChessboardSquare candidateSquare = squares[currentSquare.X, currentSquare.Y + direction];
+                if (candidateSquare.pieceOnTop == null)
+                {
+                    r.Add(candidateSquare);
+
+                    // Two Forward
+                    if (!hasMoved)
+                    {
+                        candidateSquare = squares[currentSquare.X, currentSquare.Y + 2 * direction];
+                        if (candidateSquare.pieceOnTop == null) 
+                            r.Add(candidateSquare);
+                    }
+                        
+                }
+
+                // Eat left
+                if (currentSquare.X != 1)
+                {
+                    candidateSquare = squares[currentSquare.X - 1, currentSquare.Y + direction];
+                    if (candidateSquare.pieceOnTop != null)
+                        if (candidateSquare.pieceOnTop.isWhite != this.isWhite)
+                            r.Add(candidateSquare);
+                }
+
+                // Eat right
+                if (currentSquare.X != 8)
+                {
+                    candidateSquare = squares[currentSquare.X + 1, currentSquare.Y + direction];
+                    if (candidateSquare.pieceOnTop != null)
+                        if (candidateSquare.pieceOnTop.isWhite != this.isWhite)
+                            r.Add(candidateSquare);
+                }
+            }
+        }
+
+        if (pieceType == PieceType.Rook)
+        {
+            // Up
+            for (int i = currentSquare.Y + 1; i <= 8; i++)
+            {
+                ChessboardSquare candidateSquare = squares[currentSquare.X, i];
+                if (candidateSquare.pieceOnTop == null)
+                    r.Add(candidateSquare);
+                else
+                {
+                    if (candidateSquare.pieceOnTop.isWhite != this.isWhite)
+                        r.Add(candidateSquare);
+
+                    break;
+                }  
+            }
+
+            // Down
+            for (int i = currentSquare.Y - 1; i >= 1; i--)
+            {
+                ChessboardSquare candidateSquare = squares[currentSquare.X, i];
+                if (candidateSquare.pieceOnTop == null)
+                    r.Add(candidateSquare);
+                else
+                {
+                    if (candidateSquare.pieceOnTop.isWhite != this.isWhite)
+                        r.Add(candidateSquare);
+
+                    break;
+                }
+            }
+
+            // Left
+            for (int i = currentSquare.X - 1; i >= 1; i--)
+            {
+                ChessboardSquare candidateSquare = squares[i, currentSquare.Y];
+                if (candidateSquare.pieceOnTop == null)
+                    r.Add(candidateSquare);
+                else
+                {
+                    if (candidateSquare.pieceOnTop.isWhite != this.isWhite)
+                        r.Add(candidateSquare);
+
+                    break;
+                }
+            }
+
+            // Right
+            for (int i = currentSquare.X + 1; i <= 8; i++)
+            {
+                ChessboardSquare candidateSquare = squares[i, currentSquare.Y];
+                if (candidateSquare.pieceOnTop == null)
+                    r.Add(candidateSquare);
+                else
+                {
+                    if (candidateSquare.pieceOnTop.isWhite != this.isWhite)
+                        r.Add(candidateSquare);
+
+                    break;
+                }
+            }
+        }
+
+        if (pieceType == PieceType.Knight)
+        {
+
+        }
+
         return r;
     }
 }
