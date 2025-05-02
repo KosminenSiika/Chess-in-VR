@@ -15,7 +15,7 @@ public class ChessboardSquare : MonoBehaviour
     [SerializeField] private int x;
     [SerializeField] private int y;
 
-    public ChessPieceBase pieceOnTop;
+    public ChessPieceBase pieceOnTop { get; private set; }
 
     [SerializeField] private float piecePlaceOffset = 0.0055f;
     private Vector3 placePiecePos;
@@ -47,6 +47,20 @@ public class ChessboardSquare : MonoBehaviour
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
         }
+    }
+
+    public void PlaceChessPiece(ChessPieceBase piece)
+    {
+        // Kill enemy piece if present
+        if (pieceOnTop != null && pieceOnTop != piece)
+        {
+            Destroy(pieceOnTop.gameObject);
+        }
+
+        // Place piece onto square
+        pieceOnTop = piece;
+        piece.transform.position = placePiecePos;
+        piece.transform.rotation = transform.localRotation;
     }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chessboard : MonoBehaviour
 {
-    ChessboardSquare[,] squares = new ChessboardSquare[9, 9];
+    public ChessboardSquare[,] squares = new ChessboardSquare[9, 9];
 
     // Start is called before the first frame update
     void Start()

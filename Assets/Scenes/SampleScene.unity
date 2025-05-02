@@ -427,7 +427,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 3
+    m_Bits: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -555,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594949359314334367, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.196
+      value: 0.223
       objectReference: {fileID: 0}
     - target: {fileID: 4594949359314334367, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -592,6 +592,22 @@ PrefabInstance:
     - target: {fileID: 4778017246082127393, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094686605952324735, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094686605952324735, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094686605952324735, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094686605952324735, guid: a7675386eca984e4a8ba8af817ca49d6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -759,7 +775,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1536889391}
+        m_TargetAssemblyTypeName: SeatTPBehaviour, Assembly-CSharp
+        m_MethodName: OnTeleportToPlane
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -811,24 +839,12 @@ MonoBehaviour:
   m_TeleportationProvider: {fileID: 1536889385}
   m_MatchOrientation: 2
   m_MatchDirectionalInput: 0
-  m_TeleportTrigger: 0
+  m_TeleportTrigger: 1
   m_FilterSelectionByHitNormal: 0
   m_UpNormalToleranceDegrees: 30
   m_Teleporting:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1536889391}
-        m_TargetAssemblyTypeName: SeatTPBehaviour, Assembly-CSharp
-        m_MethodName: OnTeleportToPlane
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_TeleportAnchorTransform: {fileID: 1384890246}
 --- !u!1 &236053347
 GameObject:
@@ -1124,8 +1140,7 @@ MonoBehaviour:
   - {fileID: 64197793}
   m_StartingInteractionOverridesMap:
   - groupMember: {fileID: 64197793}
-    overrideGroupMembers:
-    - {fileID: 1718871801}
+    overrideGroupMembers: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 979340140665671943, guid: 9760eb9502f6d294b903a76696deb411, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19
+      value: -0.022
       objectReference: {fileID: 0}
     - target: {fileID: 979340140665671943, guid: 9760eb9502f6d294b903a76696deb411, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1633,8 +1648,7 @@ MonoBehaviour:
   - {fileID: 1612122765}
   m_StartingInteractionOverridesMap:
   - groupMember: {fileID: 1612122765}
-    overrideGroupMembers:
-    - {fileID: 1853186773}
+    overrideGroupMembers: []
 --- !u!1 &1379255419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1876,7 @@ Transform:
   m_GameObject: {fileID: 1384890245}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.52726996, z: -0, w: 0.8496978}
-  m_LocalPosition: {x: 0.581, y: 0.03, z: 1.704}
+  m_LocalPosition: {x: 0.581, y: 0.03, z: 1.602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1884,7 +1898,6 @@ GameObject:
   - component: {fileID: 1536889389}
   - component: {fileID: 1536889388}
   - component: {fileID: 1536889387}
-  - component: {fileID: 1536889390}
   - component: {fileID: 1536889391}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
@@ -1922,8 +1935,8 @@ MonoBehaviour:
   m_Camera: {fileID: 1379255423}
   m_OriginBaseGameObject: {fileID: 1536889381}
   m_CameraFloorOffsetObject: {fileID: 1983775602}
-  m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 1.1176
+  m_RequestedTrackingOriginMode: 1
+  m_CameraYOffset: 1.65
 --- !u!4 &1536889384
 Transform:
   m_ObjectHideFlags: 0
@@ -1987,7 +2000,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.7
+  m_Height: 1.8
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -2075,21 +2088,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
---- !u!114 &1536889390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536889381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 1536889389}
-  m_MinHeight: 0
-  m_MaxHeight: Infinity
 --- !u!114 &1536889391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,7 +2105,7 @@ MonoBehaviour:
   moveProvider: {fileID: 1536889389}
   turnProvider: {fileID: 1536889388}
   characterController: {fileID: 1536889387}
-  characterControllerDriver: {fileID: 1536889390}
+  characterControllerDriver: {fileID: 0}
 --- !u!1 &1612122761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,7 +2411,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 3
+    m_Bits: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -2968,7 +2966,7 @@ Transform:
   m_GameObject: {fileID: 1983775602}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3099,7 +3097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6462625730631953539, guid: 834b035f7bdbd224aa2a358b560c4a01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.633
+      value: 0.801
       objectReference: {fileID: 0}
     - target: {fileID: 6462625730631953539, guid: 834b035f7bdbd224aa2a358b560c4a01, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3156,7 +3154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1237051265412750144, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.196
+      value: 0.223
       objectReference: {fileID: 0}
     - target: {fileID: 1237051265412750144, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3191,6 +3189,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_TeleportTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1988263145}
@@ -3199,12 +3201,104 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1536889385}
     - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
       propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1536889391}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1536889391}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1536889391}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTeleportToSeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTeleportToSeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SeatTPBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SeatTPBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SeatTPBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696198599436510660, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5500167369082723626, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
       propertyPath: m_Name
       value: ChairTPable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505592769291878159, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505592769291878159, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505592769291878159, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505592769291878159, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824051372177278169, guid: 263b1f5029bc29a41afd73715286da7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.499
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
