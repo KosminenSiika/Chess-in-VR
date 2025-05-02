@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96733678446978730}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7644997786117047396
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 1
   pieceOnTop: {fileID: 0}
@@ -190,13 +192,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160149457963531777}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7421213997037734695
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -281,6 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 6
   pieceOnTop: {fileID: 0}
@@ -313,13 +317,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207433157690700097}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7040490499618057472
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -404,6 +408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 3
   pieceOnTop: {fileID: 0}
@@ -436,13 +442,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245984417025904989}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &915632334519522483
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -527,6 +533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 7
   pieceOnTop: {fileID: 0}
@@ -598,13 +606,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625174140873553532}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1013446883378499578
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -689,6 +697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 4
   pieceOnTop: {fileID: 0}
@@ -721,13 +731,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689231299893802214}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3287070060876063391
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -812,6 +822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 1
   pieceOnTop: {fileID: 0}
@@ -844,13 +856,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689275855198184940}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &966490598790907472
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -935,6 +947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3891770105789152158, guid: e9965b19e67c6a4439118d7ddd9e0042, type: 3}
   x: 1
   y: 6
   pieceOnTop: {fileID: 0}
@@ -967,13 +981,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720321359829288578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &133071495113367870
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1058,6 +1072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 7
   pieceOnTop: {fileID: 0}
@@ -1090,13 +1106,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777534160510797164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1936507262089640970
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1181,6 +1197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 2
   pieceOnTop: {fileID: 0}
@@ -1213,13 +1231,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787704917892866408}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4672868875055196777
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1304,6 +1322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3891770105789152158, guid: f9232f2950936414991dd2b2674c8527, type: 3}
   x: 8
   y: 3
   pieceOnTop: {fileID: 0}
@@ -1336,13 +1356,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029575510322899178}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3584565646016395795
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1427,6 +1447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 2
   pieceOnTop: {fileID: 0}
@@ -1459,13 +1481,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147822424197449255}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8441563810814406770
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1550,6 +1572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 8
   pieceOnTop: {fileID: 0}
@@ -1582,13 +1606,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330180810725222087}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1082691480670983763
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1673,6 +1697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 8
   pieceOnTop: {fileID: 0}
@@ -1705,13 +1731,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451395571443691046}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3915385017945681375
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1796,6 +1822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3305482362731247271, guid: d069a6b05175ea84f920abc50ef06754, type: 3}
   x: 1
   y: 8
   pieceOnTop: {fileID: 0}
@@ -1828,13 +1856,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457651090567631782}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1143754063757443004
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1919,6 +1947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 4
   pieceOnTop: {fileID: 0}
@@ -1951,13 +1981,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510395272608252126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8970008288809289762
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2042,6 +2072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 1969046729191599518, guid: 16e9c60f09d99ab44a5992ed3c85e751, type: 3}
   x: 8
   y: 2
   pieceOnTop: {fileID: 0}
@@ -2074,13 +2106,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710948358290851755}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2091327698734200034
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2165,6 +2197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 1
   pieceOnTop: {fileID: 0}
@@ -2236,13 +2270,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2197963367979511446}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3287657887093168529
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2327,6 +2361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 4
   pieceOnTop: {fileID: 0}
@@ -2359,13 +2395,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2415853316677622232}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2042759591552845644
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2450,6 +2486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 1
   pieceOnTop: {fileID: 0}
@@ -2482,13 +2520,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2460975442642665246}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &688021976952607351
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2573,6 +2611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 1969046729191599518, guid: 88c43c1107d467141830e089552e9997, type: 3}
   x: 1
   y: 7
   pieceOnTop: {fileID: 0}
@@ -2605,13 +2645,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2574036831741356912}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1926283449660660763
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2696,6 +2736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3891770105789152158, guid: e9965b19e67c6a4439118d7ddd9e0042, type: 3}
   x: 1
   y: 3
   pieceOnTop: {fileID: 0}
@@ -2728,13 +2770,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2617772631404829318}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7193861148919531407
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2819,6 +2861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 1969046729191599518, guid: 16e9c60f09d99ab44a5992ed3c85e751, type: 3}
   x: 8
   y: 7
   pieceOnTop: {fileID: 0}
@@ -2851,13 +2895,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2651972235889412314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1165138572009052252
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2942,6 +2986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 6
   pieceOnTop: {fileID: 0}
@@ -2974,13 +3020,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2967187623479203986}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4572193494678328310
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3065,6 +3111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 7
   pieceOnTop: {fileID: 0}
@@ -3210,13 +3258,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3447443905918923285}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5134472802185575528
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3301,6 +3349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3305482362731247271, guid: 31b0ed501338f0848be56f56ccab64df, type: 3}
   x: 8
   y: 1
   pieceOnTop: {fileID: 0}
@@ -3372,13 +3422,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3579149574285822750}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5209784252071487936
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3463,6 +3513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 2
   pieceOnTop: {fileID: 0}
@@ -3495,13 +3547,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631929485986155648}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1457654211319525891
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3586,6 +3638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 5
   pieceOnTop: {fileID: 0}
@@ -3618,13 +3672,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3681623923813718694}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1835027765422376869
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3709,6 +3763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 7
   pieceOnTop: {fileID: 0}
@@ -3741,13 +3797,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852571736152401336}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5438208727379174900
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3832,6 +3888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 6
   pieceOnTop: {fileID: 0}
@@ -3864,13 +3922,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3913018897353592028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4590309075144828622
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3955,6 +4013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 1427549462978338592, guid: 211c64b011ba434449f7264683ff6a85, type: 3}
   x: 8
   y: 5
   pieceOnTop: {fileID: 0}
@@ -3987,13 +4047,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4095640517386561142}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2212110338327649623
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4078,6 +4138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 2980219975935681472, guid: 699073d1ad5818046af2fbfeb7bc80fb, type: 3}
   x: 1
   y: 4
   pieceOnTop: {fileID: 0}
@@ -4110,13 +4172,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4122247947247824266}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1125499751277678091
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4201,6 +4263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3305482362731247271, guid: d069a6b05175ea84f920abc50ef06754, type: 3}
   x: 1
   y: 1
   pieceOnTop: {fileID: 0}
@@ -4233,13 +4297,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4435034638240799711}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6994984176763058514
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4324,6 +4388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 3
   pieceOnTop: {fileID: 0}
@@ -4356,13 +4422,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4692238145250121579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3289193395945375143
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4447,6 +4513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 8
   pieceOnTop: {fileID: 0}
@@ -4479,13 +4547,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4699973298891136319}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6324976898264004824
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4570,6 +4638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 2980219975935681472, guid: 1beff7da3239fa84dafaf4c63efc3858, type: 3}
   x: 8
   y: 4
   pieceOnTop: {fileID: 0}
@@ -4602,13 +4672,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4808182059530328362}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &632458061343151674
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4693,6 +4763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 4
   pieceOnTop: {fileID: 0}
@@ -4725,13 +4797,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4861706454866283231}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3634120266111617024
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4816,6 +4888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 8
   pieceOnTop: {fileID: 0}
@@ -4848,13 +4922,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5085536266054582401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5785799705846026349
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4939,6 +5013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 8
   pieceOnTop: {fileID: 0}
@@ -4971,13 +5047,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5212362472557071724}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4777479158592314099
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5062,6 +5138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3305482362731247271, guid: 31b0ed501338f0848be56f56ccab64df, type: 3}
   x: 8
   y: 8
   pieceOnTop: {fileID: 0}
@@ -5133,13 +5211,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5334686105063328929}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5477438424115129884
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5224,6 +5302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 4
   pieceOnTop: {fileID: 0}
@@ -5295,13 +5375,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5445824736609477211}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8780442515631224552
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5386,6 +5466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 1
   pieceOnTop: {fileID: 0}
@@ -5418,13 +5500,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5508127486070184383}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3811150115267891540
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5509,6 +5591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 5
   pieceOnTop: {fileID: 0}
@@ -5541,13 +5625,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5767115065803300982}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3101257431688623604
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5632,6 +5716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 3
   pieceOnTop: {fileID: 0}
@@ -5703,13 +5789,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6101986597932843228}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &808378955260869754
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5794,6 +5880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 1969046729191599518, guid: 88c43c1107d467141830e089552e9997, type: 3}
   x: 1
   y: 2
   pieceOnTop: {fileID: 0}
@@ -5858,13 +5946,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6289918375937814849}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &163824396518547419
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5949,6 +6037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 6
   pieceOnTop: {fileID: 0}
@@ -5981,13 +6071,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6415064934306211006}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &345156320160546539
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6072,6 +6162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 5
   pieceOnTop: {fileID: 0}
@@ -6104,13 +6196,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6563362837645416141}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3001748949403405701
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6195,6 +6287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 7
   pieceOnTop: {fileID: 0}
@@ -6227,13 +6321,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6585752904142188445}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1062316071494091803
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6318,6 +6412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 3
   pieceOnTop: {fileID: 0}
@@ -6350,13 +6446,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7080677051883354708}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &111619988909412726
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6441,6 +6537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 2
   pieceOnTop: {fileID: 0}
@@ -6473,13 +6571,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7283268648053466512}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8936901831544297405}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2652733246165109818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6564,6 +6662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 8
   pieceOnTop: {fileID: 0}
@@ -6596,13 +6696,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7314290346999460307}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3636069532580124970}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2603607457885230158
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6687,6 +6787,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 7
   pieceOnTop: {fileID: 0}
@@ -6719,13 +6821,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7383452091111601870}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1325049284413289929
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6810,6 +6912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 1427549462978338592, guid: 1a4308b797c8fa94cac779a31b2683e9, type: 3}
   x: 1
   y: 5
   pieceOnTop: {fileID: 0}
@@ -6842,13 +6946,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7511119649272373302}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4638575650926053463
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6933,6 +7037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 6
   pieceOnTop: {fileID: 0}
@@ -6965,13 +7071,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7566674983308249732}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4111326455730440303
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7056,6 +7162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
   x: 7
   y: 5
   pieceOnTop: {fileID: 0}
@@ -7088,13 +7196,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7729337186091556450}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3936951192160650168
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7179,6 +7287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 5
   pieceOnTop: {fileID: 0}
@@ -7211,13 +7321,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7803033612965422018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &762502306793812973
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7302,6 +7412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 2
   pieceOnTop: {fileID: 0}
@@ -7373,13 +7485,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7965332851139025123}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 998690002577039896}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7324206608345653325
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7464,6 +7576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 1
   pieceOnTop: {fileID: 0}
@@ -7496,13 +7610,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8218497836707286802}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2035918398466076154
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7587,6 +7701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 3891770105789152158, guid: f9232f2950936414991dd2b2674c8527, type: 3}
   x: 8
   y: 6
   pieceOnTop: {fileID: 0}
@@ -7619,13 +7735,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8295098427494350704}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3680858506129761603}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4620750112425921781
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7710,6 +7826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
   x: 2
   y: 2
   pieceOnTop: {fileID: 0}
@@ -7742,13 +7860,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314235519403653701}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1352590329449624306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7833,6 +7951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 4
   y: 3
   pieceOnTop: {fileID: 0}
@@ -7865,13 +7985,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8419078338417743168}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6128453199549371312}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8573877540779649784
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7956,6 +8076,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 4
   pieceOnTop: {fileID: 0}
@@ -8014,7 +8136,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8436859428067312084}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -8029,7 +8151,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8061,13 +8183,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8621073729657236932}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7372319003648722851}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4279480713688894060
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8152,6 +8274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 6
   y: 5
   pieceOnTop: {fileID: 0}
@@ -8184,13 +8308,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724473632900101104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8708374686667358555}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1203353037443809507
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8275,6 +8399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 3
   y: 3
   pieceOnTop: {fileID: 0}
@@ -8307,13 +8433,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9190854151986695643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3618218286365213466}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5526674603069330589
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8398,6 +8524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
+  chessboard: {fileID: 1059502763880819578}
+  pieceToInstantiate: {fileID: 0}
   x: 5
   y: 6
   pieceOnTop: {fileID: 0}

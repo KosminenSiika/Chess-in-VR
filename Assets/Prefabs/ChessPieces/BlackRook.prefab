@@ -472,6 +472,7 @@ MonoBehaviour:
   chessboard: {fileID: 0}
   previousSquare: {fileID: 0}
   currentSquare: {fileID: 0}
+  pieceType: 1
   isWhite: 0
 --- !u!54 &8849060785286182121
 Rigidbody:

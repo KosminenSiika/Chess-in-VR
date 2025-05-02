@@ -8,6 +8,7 @@ public class ChessboardSquare : MonoBehaviour
 {
     [SerializeField] private ReferencesSO referencesSO;
     [SerializeField] private Chessboard chessboard;
+    [SerializeField] private GameObject pieceToInstantiate;
 
     public int X { get { return x; } private set { x = value; } }
     public int Y { get { return y; } private set { y = value; } }
@@ -39,58 +40,6 @@ public class ChessboardSquare : MonoBehaviour
     // Function for instantiating pieces at game start/reset, all pieces should be deleted before calling these
     public void InstantiateChessPiece()
     {
-        GameObject pieceToInstantiate = null;
-
-        if (X == 1 && (Y == 1 || Y == 8))
-        {
-            pieceToInstantiate = referencesSO.whiteRookPrefab;
-        }
-        else if (X == 1 && (Y == 2 || Y == 7))
-        {
-            pieceToInstantiate = referencesSO.whiteKnightPrefab;
-        }
-        else if (X == 1 && (Y == 3 || Y == 6))
-        {
-            pieceToInstantiate = referencesSO.whiteBishopPrefab;
-        }
-        else if (X == 1 && Y == 4)
-        {
-            pieceToInstantiate = referencesSO.whiteQueenPrefab;
-        }
-        else if (X == 1 && Y == 5)
-        {
-            pieceToInstantiate = referencesSO.whiteKingPrefab;
-        }
-        else if (X == 2)
-        {
-            pieceToInstantiate = referencesSO.whitePawnPrefab;
-        }
-
-        else if (X == 8 && (Y == 1 || Y == 8))
-        {
-            pieceToInstantiate = referencesSO.blackRookPrefab;
-        }
-        else if (X == 8 && (Y == 2 || Y == 7))
-        {
-            pieceToInstantiate = referencesSO.blackKnightPrefab;
-        }
-        else if (X == 8 && (Y == 3 || Y == 6))
-        {
-            pieceToInstantiate = referencesSO.blackBishopPrefab;
-        }
-        else if (X == 8 && Y == 4)
-        {
-            pieceToInstantiate = referencesSO.blackQueenPrefab;
-        }
-        else if (X == 8 && Y == 5)
-        {
-            pieceToInstantiate = referencesSO.blackKingPrefab;
-        }
-        else if (X == 7)
-        {
-            pieceToInstantiate = referencesSO.blackPawnPrefab;
-        }
-
         if (pieceToInstantiate != null)
         {
             GameObject instantiatedPiece = Instantiate(pieceToInstantiate, placePiecePos, transform.localRotation);

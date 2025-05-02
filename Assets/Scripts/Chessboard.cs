@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Chessboard : MonoBehaviour
 {
-    ChessboardSquare[] squareArray;
+    ChessboardSquare[,] squares = new ChessboardSquare[9, 9];
 
     // Start is called before the first frame update
     void Start()
     {
-        squareArray = GetComponentsInChildren<ChessboardSquare>();
+        ChessboardSquare[] squareArray = GetComponentsInChildren<ChessboardSquare>();
         foreach (ChessboardSquare square in squareArray)
         {
+            squares[square.X, square.Y] = square;
             square.InstantiateChessPiece();
         }
 
