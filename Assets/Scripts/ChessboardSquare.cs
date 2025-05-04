@@ -15,7 +15,7 @@ public class ChessboardSquare : MonoBehaviour
     [SerializeField] private int x;
     [SerializeField] private int y;
 
-    public ChessPieceBase pieceOnTop { get; private set; }
+    public ChessPieceBase pieceOnTop;
 
     [SerializeField] private float piecePlaceOffset = 0.0055f;
     private Vector3 placePiecePos;
@@ -61,6 +61,11 @@ public class ChessboardSquare : MonoBehaviour
         pieceOnTop = piece;
         piece.transform.position = placePiecePos;
         piece.transform.rotation = transform.localRotation;
+    }
+
+    public void EmptySquare()
+    {
+        pieceOnTop = null;
     }
 
 }

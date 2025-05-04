@@ -121,8 +121,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 1
+  x: 1
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &125776212845093632
@@ -410,8 +410,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 3
+  x: 3
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &245984417025904989
@@ -535,8 +535,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 7
+  x: 7
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &294617506881784255
@@ -699,8 +699,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 4
+  x: 4
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &689231299893802214
@@ -824,8 +824,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 1
+  x: 1
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &689275855198184940
@@ -949,8 +949,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 3891770105789152158, guid: e9965b19e67c6a4439118d7ddd9e0042, type: 3}
-  x: 1
-  y: 6
+  x: 6
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &720321359829288578
@@ -1199,8 +1199,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 2
+  x: 2
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &787704917892866408
@@ -1324,8 +1324,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 3891770105789152158, guid: f9232f2950936414991dd2b2674c8527, type: 3}
-  x: 8
-  y: 3
+  x: 3
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1029575510322899178
@@ -1449,8 +1449,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 2
+  x: 2
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1147822424197449255
@@ -1574,8 +1574,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 8
+  x: 8
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1330180810725222087
@@ -1699,8 +1699,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 8
+  x: 8
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1451395571443691046
@@ -1824,8 +1824,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 3305482362731247271, guid: d069a6b05175ea84f920abc50ef06754, type: 3}
-  x: 1
-  y: 8
+  x: 8
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1457651090567631782
@@ -1949,8 +1949,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 4
+  x: 4
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1510395272608252126
@@ -2074,8 +2074,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 1969046729191599518, guid: 16e9c60f09d99ab44a5992ed3c85e751, type: 3}
-  x: 8
-  y: 2
+  x: 2
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1710948358290851755
@@ -2199,8 +2199,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 1
+  x: 1
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &1906699618059009882
@@ -2363,8 +2363,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 4
+  x: 4
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2415853316677622232
@@ -2488,8 +2488,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 1
+  x: 1
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2460975442642665246
@@ -2613,8 +2613,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 1969046729191599518, guid: 88c43c1107d467141830e089552e9997, type: 3}
-  x: 1
-  y: 7
+  x: 7
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2574036831741356912
@@ -2738,8 +2738,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 3891770105789152158, guid: e9965b19e67c6a4439118d7ddd9e0042, type: 3}
-  x: 1
-  y: 3
+  x: 3
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2617772631404829318
@@ -2863,8 +2863,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 1969046729191599518, guid: 16e9c60f09d99ab44a5992ed3c85e751, type: 3}
-  x: 8
-  y: 7
+  x: 7
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2651972235889412314
@@ -2988,8 +2988,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 6
+  x: 6
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &2967187623479203986
@@ -3113,8 +3113,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 7
+  x: 7
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3344316791805348457
@@ -3351,8 +3351,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 3305482362731247271, guid: 31b0ed501338f0848be56f56ccab64df, type: 3}
-  x: 8
-  y: 1
+  x: 1
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3573297397235768671
@@ -3515,8 +3515,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 2
+  x: 2
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3631929485986155648
@@ -3765,8 +3765,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 7
+  x: 7
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3852571736152401336
@@ -3890,8 +3890,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 6
+  x: 6
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &3913018897353592028
@@ -4015,8 +4015,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 1427549462978338592, guid: 211c64b011ba434449f7264683ff6a85, type: 3}
-  x: 8
-  y: 5
+  x: 5
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4095640517386561142
@@ -4140,8 +4140,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 2980219975935681472, guid: 699073d1ad5818046af2fbfeb7bc80fb, type: 3}
-  x: 1
-  y: 4
+  x: 4
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4122247947247824266
@@ -4390,8 +4390,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 3
+  x: 3
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4692238145250121579
@@ -4515,8 +4515,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 8
+  x: 8
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4699973298891136319
@@ -4640,8 +4640,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 2980219975935681472, guid: 1beff7da3239fa84dafaf4c63efc3858, type: 3}
-  x: 8
-  y: 4
+  x: 4
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &4808182059530328362
@@ -4890,8 +4890,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 8
+  x: 8
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5085536266054582401
@@ -5015,8 +5015,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 8
+  x: 8
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5212362472557071724
@@ -5304,8 +5304,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 4
+  x: 4
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5399223822923715979
@@ -5468,8 +5468,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 1
+  x: 1
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5508127486070184383
@@ -5593,8 +5593,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 5
+  x: 5
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5767115065803300982
@@ -5718,8 +5718,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 3
+  x: 3
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &5832543657126023514
@@ -5882,8 +5882,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 1969046729191599518, guid: 88c43c1107d467141830e089552e9997, type: 3}
-  x: 1
-  y: 2
+  x: 2
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6207993854866741172
@@ -6039,8 +6039,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 6
+  x: 6
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6415064934306211006
@@ -6164,8 +6164,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 5
+  x: 5
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6563362837645416141
@@ -6289,8 +6289,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 7
+  x: 7
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &6585752904142188445
@@ -6414,8 +6414,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 3
+  x: 3
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7080677051883354708
@@ -6539,8 +6539,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 2
+  x: 2
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7283268648053466512
@@ -6664,8 +6664,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 8fc7aeccbae8e16429ac68f15e74315c, type: 3}
-  x: 2
-  y: 8
+  x: 8
+  y: 2
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7314290346999460307
@@ -6789,8 +6789,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 7
+  x: 7
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7383452091111601870
@@ -6914,8 +6914,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 1427549462978338592, guid: 1a4308b797c8fa94cac779a31b2683e9, type: 3}
-  x: 1
-  y: 5
+  x: 5
+  y: 1
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7511119649272373302
@@ -7039,8 +7039,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 6
+  x: 6
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7566674983308249732
@@ -7164,8 +7164,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 4337530346287138330, guid: 0068f4c63c03de147b28c6158601ecfa, type: 3}
-  x: 7
-  y: 5
+  x: 5
+  y: 7
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7729337186091556450
@@ -7289,8 +7289,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 5
+  x: 5
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7803033612965422018
@@ -7414,8 +7414,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 2
+  x: 2
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &7958597268206952140
@@ -7578,8 +7578,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 3
-  y: 1
+  x: 1
+  y: 3
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8218497836707286802
@@ -7703,8 +7703,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 3891770105789152158, guid: f9232f2950936414991dd2b2674c8527, type: 3}
-  x: 8
-  y: 6
+  x: 6
+  y: 8
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8295098427494350704
@@ -7953,8 +7953,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 4
-  y: 3
+  x: 3
+  y: 4
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8419078338417743168
@@ -8078,8 +8078,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 4
+  x: 4
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8436859428067312084
@@ -8276,8 +8276,8 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 6
-  y: 5
+  x: 5
+  y: 6
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
 --- !u!1 &8724473632900101104
@@ -8526,7 +8526,7 @@ MonoBehaviour:
   referencesSO: {fileID: 11400000, guid: b4cb2998964b8be47a26949ff6baf1b5, type: 2}
   chessboard: {fileID: 1059502763880819578}
   pieceToInstantiate: {fileID: 0}
-  x: 5
-  y: 6
+  x: 6
+  y: 5
   pieceOnTop: {fileID: 0}
   piecePlaceOffset: 0.0055
