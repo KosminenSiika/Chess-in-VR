@@ -44,6 +44,8 @@ public class ChessPieceBase : MonoBehaviour
         availableMoves.Clear();
         availableMoves = GetAvailableMoves(pieceType, ref chessboard.squares);
 
+        foreach (ChessboardSquare square in availableMoves)
+            square.SetSquareHighlight(HighlightColour.Available);
         // TODO: Highlight availableMoves squares
     }
 
@@ -65,6 +67,9 @@ public class ChessPieceBase : MonoBehaviour
 
         // Place piece onto square
         targetSquare.PlaceChessPiece(this);
+
+        foreach (ChessboardSquare square in availableMoves)
+            square.SetSquareHighlight(HighlightColour.None);
 
         if (targetSquare != currentSquare)
         {
