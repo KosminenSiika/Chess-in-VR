@@ -15,7 +15,6 @@ public enum HighlightColour
 public class ChessboardSquare : MonoBehaviour
 {
     // References
-    [SerializeField] private ReferencesSO referencesSO;
     [SerializeField] private Chessboard chessboard;
     [SerializeField] private GameObject pieceToInstantiate;
 
