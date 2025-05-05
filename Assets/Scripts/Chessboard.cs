@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chessboard : MonoBehaviour
 {
     public ChessboardSquare[,] squares = new ChessboardSquare[9, 9];
+    public List<ChessboardSquare[]> moveList = new List<ChessboardSquare[]>();
 
     // Start is called before the first frame update
     void Start()

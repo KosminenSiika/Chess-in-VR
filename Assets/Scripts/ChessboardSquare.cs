@@ -15,6 +15,7 @@ public enum HighlightColour
 public class ChessboardSquare : MonoBehaviour
 {
     // References
+    public GameObject PieceToInstantiate { get { return pieceToInstantiate; } private set {  pieceToInstantiate = value; } }
     [SerializeField] private Chessboard chessboard;
     [SerializeField] private GameObject pieceToInstantiate;
 
@@ -67,12 +68,32 @@ public class ChessboardSquare : MonoBehaviour
         }
     }
 
+    public void HandleQueening()
+    {
+        Destroy(pieceOnTop.gameObject);
+        
+        if (Y == 8)
+        {
+            GameObject queen = Instantiate(chessboard.squares[4, 1].PieceToInstantiate, placePiecePos, transform.localRotation); // White Queen
+            pieceOnTop = queen.GetComponent<ChessPieceBase>();
+            pieceOnTop.currentSquare = this;
+            pieceOnTop.chessboard = chessboard;
+        }
+        else
+        {
+            GameObject queen = Instantiate(chessboard.squares[4, 8].PieceToInstantiate, placePiecePos, transform.localRotation); // Black Queen
+            pieceOnTop = queen.GetComponent<ChessPieceBase>();
+            pieceOnTop.currentSquare = this;
+            pieceOnTop.chessboard = chessboard;
+        }
+    }
+
     public void PlaceChessPiece(ChessPieceBase piece)
     {
-        // Kill enemy piece if present
+        // Eliminate enemy piece if present
         if (pieceOnTop != null && pieceOnTop != piece)
         {
-            Destroy(pieceOnTop.gameObject);
+            EliminatePieceOnTop();
         }
 
         // Place piece onto square
@@ -80,11 +101,20 @@ public class ChessboardSquare : MonoBehaviour
         piece.transform.position = placePiecePos;
         piece.transform.rotation = transform.localRotation;
     }
+    public void EliminatePieceOnTop()
+    {
+        if (pieceOnTop != null)
+        {
+            Destroy(pieceOnTop.gameObject);
+        }
+        EmptySquare();
+    }
 
     public void EmptySquare()
     {
         pieceOnTop = null;
     }
+
 
     public void SetSquareHighlight(HighlightColour highlightColour)
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public enum PieceType
@@ -13,17 +14,25 @@ public enum PieceType
     King,
 }
 
+public enum SpecialMove
+{
+    None,
+    EnPassant,
+    Castling,
+    Queening,
+}
+
 public class ChessPieceBase : MonoBehaviour
 {
     [SerializeField] private GameObject model;
 
     public Chessboard chessboard;
-    public ChessboardSquare previousSquare;
     public ChessboardSquare currentSquare;
 
     public PieceType pieceType;
     public bool isWhite;
     private bool hasMoved = false;
+    private SpecialMove specialMove;
 
     private List<ChessboardSquare> availableMoves = new List<ChessboardSquare>();
 
@@ -43,10 +52,11 @@ public class ChessPieceBase : MonoBehaviour
     {
         availableMoves.Clear();
         availableMoves = GetAvailableMoves(pieceType, ref chessboard.squares);
+        specialMove = GetSpecialMoves(pieceType, ref chessboard.squares, ref chessboard.moveList, ref availableMoves);
 
+        // Highlight availableMoves squares
         foreach (ChessboardSquare square in availableMoves)
-            square.SetSquareHighlight(HighlightColour.Available);
-        // TODO: Highlight availableMoves squares
+            square.SetSquareHighlight(HighlightColour.Available); 
     }
 
     public void OnDropped()
@@ -65,25 +75,37 @@ public class ChessPieceBase : MonoBehaviour
         else
             targetSquare = currentSquare;
 
-        // Place piece onto square
-        targetSquare.PlaceChessPiece(this);
-
+        // Clear highlights
         foreach (ChessboardSquare square in availableMoves)
             square.SetSquareHighlight(HighlightColour.None);
 
         if (targetSquare != currentSquare)
         {
-            currentSquare.EmptySquare();
-
-            previousSquare = currentSquare;
-            currentSquare = targetSquare;
-
-            if (!hasMoved)
-                hasMoved = true;
-
-            // Function call to prevent further interaction with pieces -> press chess clock to end turn
+            MoveTo(targetSquare);
+        }
+        else
+        {
+            // Place piece back onto currentSquare
+            currentSquare.PlaceChessPiece(this);
         }
 
+    }
+
+    public void MoveTo(ChessboardSquare targetSquare)
+    {
+        targetSquare.PlaceChessPiece(this);
+
+        chessboard.moveList.Add(new ChessboardSquare[] { currentSquare, targetSquare });
+
+        currentSquare.EmptySquare();
+        currentSquare = targetSquare;
+
+        if (!hasMoved)
+            hasMoved = true;
+
+        // Function call to prevent further interaction with pieces -> press chess clock to end turn
+
+        ProcessSpecialMove();
     }
 
     public List<ChessboardSquare> GetAvailableMoves(PieceType pieceType, ref ChessboardSquare[,] squares)
@@ -530,5 +552,155 @@ public class ChessPieceBase : MonoBehaviour
         }
         
         return r;
+    }
+
+    public SpecialMove GetSpecialMoves(PieceType pieceType, ref ChessboardSquare[,] squares, ref List<ChessboardSquare[]> moveList, ref List<ChessboardSquare> availableMoves)
+    {
+        SpecialMove r = SpecialMove.None;
+
+        if (pieceType == PieceType.Pawn)
+        {
+            int direction = isWhite ? 1 : -1;
+
+            // Queening
+            if ((isWhite && currentSquare.Y == 7) || (!isWhite && currentSquare.Y == 2))
+                return SpecialMove.Queening;
+
+            // En Passant
+            if (moveList.Count > 0)
+            {
+                ChessboardSquare[] lastMove = moveList[moveList.Count - 1];
+                if (squares[lastMove[1].X, lastMove[1].Y].pieceOnTop.pieceType == PieceType.Pawn) // If the last piece moved was a pawn
+                {
+                    if (Mathf.Abs(lastMove[0].Y - lastMove[1].Y) == 2) // If the last move was a double forward
+                    {
+                        if (lastMove[1].Y == currentSquare.Y) // If pawns are on the same rank
+                        {
+                            if (lastMove[1].X == currentSquare.X - 1) // Landed to the left
+                            {
+                                availableMoves.Add(squares[currentSquare.X - 1, currentSquare.Y + direction]);
+                                return SpecialMove.EnPassant;
+                            }
+                            if (lastMove[1].X == currentSquare.X + 1) // Landed to the right
+                            {
+                                availableMoves.Add(squares[currentSquare.X + 1, currentSquare.Y + direction]);
+                                return SpecialMove.EnPassant;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (pieceType == PieceType.King)
+        {
+            // Castling
+            if (!hasMoved) // King hasn't moved
+                if (isWhite) // White team
+                {
+                    if (squares[1, 1].pieceOnTop != null) // There is a piece on A1
+                        if (!squares[1, 1].pieceOnTop.hasMoved) // That piece hasn't moved -> is a Rook
+                            if (squares[2, 1].pieceOnTop == null)           //
+                                if (squares[3, 1].pieceOnTop == null)       // The squares in between are empty
+                                    if (squares[4, 1].pieceOnTop == null)   //
+                                    {
+                                        availableMoves.Add(squares[3, 1]);
+                                        r = SpecialMove.Castling;
+                                    }
+
+                    if (squares[8, 1].pieceOnTop != null) // There is a piece on H1
+                        if (!squares[8, 1].pieceOnTop.hasMoved) // That piece hasn't moved -> is a Rook
+                            if (squares[7, 1].pieceOnTop == null)       // 
+                                if (squares[6, 1].pieceOnTop == null)   // The squares in between are empty
+                                {
+                                    availableMoves.Add(squares[7, 1]);
+                                    r = SpecialMove.Castling;
+                                }
+                }
+                else // Black team
+                {
+                    if (squares[1, 8].pieceOnTop != null) // There is a piece on A8
+                        if (!squares[1, 8].pieceOnTop.hasMoved) // That piece hasn't moved -> is a Rook
+                            if (squares[2, 8].pieceOnTop == null)           //
+                                if (squares[3, 8].pieceOnTop == null)       // The squares in between are empty
+                                    if (squares[4, 8].pieceOnTop == null)   //
+                                    {
+                                        availableMoves.Add(squares[3, 8]);
+                                        r = SpecialMove.Castling;
+                                    }
+
+                    if (squares[8, 8].pieceOnTop != null) // There is a piece on H8
+                        if (!squares[8, 8].pieceOnTop.hasMoved) // That piece hasn't moved -> is a Rook
+                            if (squares[7, 8].pieceOnTop == null)       // 
+                                if (squares[6, 8].pieceOnTop == null)   // The squares in between are empty
+                                {
+                                    availableMoves.Add(squares[7, 8]);
+                                    r = SpecialMove.Castling;
+                                }
+                }
+        }
+
+        return r;
+    }
+
+    private void ProcessSpecialMove()
+    {
+        if (specialMove == SpecialMove.Queening)
+            if (currentSquare.Y == 8 || currentSquare.Y == 1)
+                currentSquare.HandleQueening(); // Outsource the Queening because this gameObject is going to get destroyed :-)
+
+        if (specialMove == SpecialMove.EnPassant)
+        {
+            ChessboardSquare targetPawnPosition = chessboard.moveList[chessboard.moveList.Count - 2][1];
+            if (currentSquare.X ==  targetPawnPosition.X)
+                targetPawnPosition.EliminatePieceOnTop();
+        }
+
+        if (specialMove == SpecialMove.Castling)
+        {
+            ChessboardSquare[] lastMove = chessboard.moveList[chessboard.moveList.Count - 1];
+
+            // Left Rook
+            if (lastMove[1].X == 3)
+            {
+                if (isWhite) // White team
+                {
+                    ChessboardSquare targetSquare = chessboard.squares[4, 1];
+                    ChessPieceBase rook = chessboard.squares[1, 1].pieceOnTop;
+                    targetSquare.PlaceChessPiece(rook);
+                    rook.currentSquare.EmptySquare();
+                    rook.currentSquare = targetSquare;
+                }
+                else // Black team
+                {
+                    ChessboardSquare targetSquare = chessboard.squares[4, 8];
+                    ChessPieceBase rook = chessboard.squares[1, 8].pieceOnTop;
+                    targetSquare.PlaceChessPiece(rook);
+                    rook.currentSquare.EmptySquare();
+                    rook.currentSquare = targetSquare;
+                }
+            }
+
+            // Right Rook
+            else if (lastMove[1].X == 7)
+            {
+                if (isWhite) // White team
+                {
+                    ChessboardSquare targetSquare = chessboard.squares[6, 1];
+                    ChessPieceBase rook = chessboard.squares[8, 1].pieceOnTop;
+                    targetSquare.PlaceChessPiece(rook);
+                    rook.currentSquare.EmptySquare();
+                    rook.currentSquare = targetSquare;
+                }
+                else // Black team
+                {
+                    ChessboardSquare targetSquare = chessboard.squares[6, 8];
+                    ChessPieceBase rook = chessboard.squares[8, 8].pieceOnTop;
+                    targetSquare.PlaceChessPiece(rook);
+                    rook.currentSquare.EmptySquare();
+                    rook.currentSquare = targetSquare;
+                }
+            }
+        }
     }
 }
