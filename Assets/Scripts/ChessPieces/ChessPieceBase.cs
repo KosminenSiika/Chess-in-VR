@@ -60,34 +60,40 @@ public class ChessPieceBase : MonoBehaviour
     }
     public void OnDropped()
     {
-        ChessboardSquare targetSquare;
-
-        // Find target square under the piece
-        LayerMask layerMask = LayerMask.GetMask("ChessboardSquare");
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, Vector3.down, Mathf.Infinity, layerMask);
-        if (hits.Length > 0)
+        if (gameManager.isGameOver)
         {
-            targetSquare = hits[0].collider.GetComponent<ChessboardSquare>();
-            if (!availableMoves.Contains(targetSquare))
-                targetSquare = currentSquare;
+            currentSquare.PlaceChessPiece(this);
         }
         else
-            targetSquare = currentSquare;
+        {
+            ChessboardSquare targetSquare;
+
+            // Find target square under the piece
+            LayerMask layerMask = LayerMask.GetMask("ChessboardSquare");
+            RaycastHit[] hits = Physics.RaycastAll(transform.position, Vector3.down, Mathf.Infinity, layerMask);
+            if (hits.Length > 0)
+            {
+                targetSquare = hits[0].collider.GetComponent<ChessboardSquare>();
+                if (!availableMoves.Contains(targetSquare))
+                    targetSquare = currentSquare;
+            }
+            else
+                targetSquare = currentSquare;
+
+            if (targetSquare != currentSquare)
+            {
+                MoveTo(targetSquare);
+            }
+            else
+            {
+                // Place piece back onto currentSquare
+                currentSquare.PlaceChessPiece(this);
+            }
+        }
 
         // Clear highlights
         foreach (ChessboardSquare square in availableMoves)
             square.SetSquareHighlight(HighlightColour.None);
-
-        if (targetSquare != currentSquare)
-        {
-            MoveTo(targetSquare);
-        }
-        else
-        {
-            // Place piece back onto currentSquare
-            currentSquare.PlaceChessPiece(this);
-        }
-
     }
 
     // Get moves
@@ -699,9 +705,9 @@ public class ChessPieceBase : MonoBehaviour
                         if (square.pieceOnTop.isWhite == this.isWhite)
                             ourKing = square.pieceOnTop;
 
-        SimulateMoves(ourKing, ref availableMoves, ref squares);
+        SimulateMovesForCheck(ourKing, ref availableMoves, ref squares);
     }
-    public void SimulateMoves(ChessPieceBase ourKing, ref List<ChessboardSquare> availableMoves, ref ChessboardSquare[,] squares)
+    public void SimulateMovesForCheck(ChessPieceBase ourKing, ref List<ChessboardSquare> availableMoves, ref ChessboardSquare[,] squares)
     {
         // Save actual current square, to reset after simulation
         ChessboardSquare actualSquare = currentSquare;
@@ -742,8 +748,8 @@ public class ChessPieceBase : MonoBehaviour
             {
                 List<ChessboardSquare> pieceMoves = attackingPiece.GetAvailableMoves(attackingPiece.pieceType, ref squares);
                 foreach(ChessboardSquare pieceMove in pieceMoves)
-                if (!simAttackingMoves.Contains(pieceMove))
-                        simAttackingMoves.Add(pieceMove);
+                    if (!simAttackingMoves.Contains(pieceMove))
+                            simAttackingMoves.Add(pieceMove);
             }
 
             // Does the king's square appear in the attacking pieces' moves? If so, add that square to movesToRemove
@@ -765,6 +771,59 @@ public class ChessPieceBase : MonoBehaviour
         }
     }
 
+    // Checkmate
+    private bool CheckForCheckmate()
+    {
+        List<ChessPieceBase> attackingPieces = new List<ChessPieceBase>();
+        List<ChessPieceBase> defendingPieces = new List<ChessPieceBase>();
+        ChessPieceBase targetKing = null;
+
+        // Populate lists and target king
+        foreach (ChessboardSquare square in chessboard.squares)
+            if (square != null)
+                if (square.pieceOnTop != null)
+                    if (square.pieceOnTop.isWhite != this.isWhite)
+                    {
+                        defendingPieces.Add(square.pieceOnTop);
+                        if (square.pieceOnTop.pieceType == PieceType.King)
+                            targetKing = square.pieceOnTop;
+                    }
+                    else
+                        attackingPieces.Add(square.pieceOnTop);
+
+        // Get all the attacking moves
+        List<ChessboardSquare> attackingMoves = new List<ChessboardSquare>();
+        foreach (ChessPieceBase attackingPiece in attackingPieces)
+        {
+            List<ChessboardSquare> pieceMoves = attackingPiece.GetAvailableMoves(attackingPiece.pieceType, ref chessboard.squares);
+            foreach (ChessboardSquare pieceMove in pieceMoves)
+                if (!attackingMoves.Contains(pieceMove))
+                    attackingMoves.Add(pieceMove);
+        }
+
+        // Is the king in check? (in the attacking moves list)
+        if (attackingMoves.Contains(targetKing.currentSquare))
+        {
+            // TODO: Add red tint to king
+            Debug.Log("Check!");
+
+            // Can the king be defended?
+            foreach (ChessPieceBase defendingPiece in defendingPieces)
+            {
+                // Get available moves
+                List<ChessboardSquare> defendingMoves = defendingPiece.GetAvailableMoves(defendingPiece.pieceType, ref chessboard.squares);
+                // Remove moves that result in check
+                defendingPiece.SimulateMovesForCheck(targetKing, ref defendingMoves, ref chessboard.squares);
+
+                // If there is any defending move that can be played -> no checkmate
+                if (defendingMoves.Count > 0)
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
     // Move piece on the board
     public void MoveTo(ChessboardSquare targetSquare)
     {
@@ -782,5 +841,11 @@ public class ChessPieceBase : MonoBehaviour
         gameManager.SwitchTurn(gameManager.isWhiteTurn);
 
         ProcessSpecialMove();
+
+        if (!gameManager.isFirstMoveMade)
+            gameManager.isFirstMoveMade = true;
+
+        if (CheckForCheckmate())
+            gameManager.WinGame(isWhite, true);
     }
 }

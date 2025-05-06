@@ -18,6 +18,7 @@ public class ChessGameManager : MonoBehaviour
     public bool isWhiteTurn = true;
     public bool isPlayerWhite = true;
     public bool isFirstMoveMade = false;
+    public bool isGameOver = false;
 
     public int difficulty = 0;
 
@@ -51,20 +52,21 @@ public class ChessGameManager : MonoBehaviour
             {
                 blackCurrentTime -= Time.deltaTime;
             }
-        }
 
-        if (whiteCurrentTime <= 0)
-        {
-            WinGame(false);
-        }
-        if (blackCurrentTime <= 0)
-        {
-            WinGame(true);
+            if (whiteCurrentTime <= 0)
+            {
+                WinGame(false, false);
+            }
+            if (blackCurrentTime <= 0)
+            {
+                WinGame(true, false);
+            }
         }
     }
 
     public void ResetGame()
     {
+        isGameOver = false;
         isWhiteTurn = true;
         isFirstMoveMade = false;
         // isPlayerWhite = UI element toggle value
@@ -93,19 +95,34 @@ public class ChessGameManager : MonoBehaviour
         chessboard.InstantiatePieces();
     }
 
-    public void WinGame(bool isWhiteTeam)
+    public void WinGame(bool isWhiteTeam, bool isCheckmate)
     {
-        // Disable chess engine
-        EnablePlayerInteractionWithPieces(false);
+        isGameOver = true;
         isFirstMoveMade = false;
+
+        // Disable chess engine
+
+        leftInteractor.enabled = false;
+        rightInteractor.enabled = false;
+
+        EnablePlayerInteractionWithPieces(false);
+
+        if (isCheckmate)
+            Debug.Log("Checkmate!");
+
         if (isWhiteTeam)
         {
             // Display white team win
+            Debug.Log("White team wins!");
         }
         else
         {
             // Display black team win
+            Debug.Log("Black team wins!");
         }
+
+        Debug.Log("White team time left: " + whiteCurrentTime);
+        Debug.Log("Black team time left: " + blackCurrentTime);
     }
 
     public void SwitchTurn(bool isPrevTurnWhite)

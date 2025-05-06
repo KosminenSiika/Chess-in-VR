@@ -3093,6 +3093,7 @@ MonoBehaviour:
   isWhiteTurn: 1
   isPlayerWhite: 1
   isFirstMoveMade: 0
+  isGameOver: 0
   difficulty: 0
 --- !u!1 &1983775602
 GameObject:
