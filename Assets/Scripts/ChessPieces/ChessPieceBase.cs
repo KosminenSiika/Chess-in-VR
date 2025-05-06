@@ -46,23 +46,18 @@ public class ChessPieceBase : MonoBehaviour
         gameManager = FindFirstObjectByType<ChessGameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    // Interaction with player's interactors
     public void OnPickedUp()
     {
         availableMoves.Clear();
         availableMoves = GetAvailableMoves(pieceType, ref chessboard.squares);
-        specialMove = GetSpecialMoves(pieceType, ref chessboard.squares, ref chessboard.moveList, ref availableMoves);
+        specialMove = GetSpecialMoves(pieceType, ref chessboard.squares, ref chessboard.moveList);
+        PreventCheck(ref chessboard.squares);
 
         // Highlight availableMoves squares
         foreach (ChessboardSquare square in availableMoves)
             square.SetSquareHighlight(HighlightColour.Available); 
     }
-
     public void OnDropped()
     {
         ChessboardSquare targetSquare;
@@ -95,24 +90,7 @@ public class ChessPieceBase : MonoBehaviour
 
     }
 
-    public void MoveTo(ChessboardSquare targetSquare)
-    {
-        targetSquare.PlaceChessPiece(this);
-
-        chessboard.moveList.Add(new ChessboardSquare[] { currentSquare, targetSquare });
-
-        currentSquare.EmptySquare();
-        currentSquare = targetSquare;
-
-        if (!hasMoved)
-            hasMoved = true;
-
-        // Function call to prevent further interaction with pieces -> press chess clock to end turn
-        gameManager.SwitchTurn(gameManager.isWhiteTurn);
-
-        ProcessSpecialMove();
-    }
-
+    // Get moves
     public List<ChessboardSquare> GetAvailableMoves(PieceType pieceType, ref ChessboardSquare[,] squares)
     {
         List<ChessboardSquare> r = new List<ChessboardSquare>();
@@ -559,7 +537,8 @@ public class ChessPieceBase : MonoBehaviour
         return r;
     }
 
-    public SpecialMove GetSpecialMoves(PieceType pieceType, ref ChessboardSquare[,] squares, ref List<ChessboardSquare[]> moveList, ref List<ChessboardSquare> availableMoves)
+    // Special moves
+    private SpecialMove GetSpecialMoves(PieceType pieceType, ref ChessboardSquare[,] squares, ref List<ChessboardSquare[]> moveList)
     {
         SpecialMove r = SpecialMove.None;
 
@@ -647,7 +626,6 @@ public class ChessPieceBase : MonoBehaviour
 
         return r;
     }
-
     private void ProcessSpecialMove()
     {
         if (specialMove == SpecialMove.Queening)
@@ -707,5 +685,102 @@ public class ChessPieceBase : MonoBehaviour
                 }
             }
         }
+    }
+    
+    // Preventing checks
+    private void PreventCheck(ref ChessboardSquare[,] squares)
+    {
+        // Find our king piece
+        ChessPieceBase ourKing = null;
+        foreach (ChessboardSquare square in squares)
+            if (square != null) 
+                if (square.pieceOnTop != null)
+                    if (square.pieceOnTop.pieceType == PieceType.King)
+                        if (square.pieceOnTop.isWhite == this.isWhite)
+                            ourKing = square.pieceOnTop;
+
+        SimulateMoves(ourKing, ref availableMoves, ref squares);
+    }
+    public void SimulateMoves(ChessPieceBase ourKing, ref List<ChessboardSquare> availableMoves, ref ChessboardSquare[,] squares)
+    {
+        // Save actual current square, to reset after simulation
+        ChessboardSquare actualSquare = currentSquare;
+        List<ChessboardSquare> movesToRemove = new List<ChessboardSquare>();
+
+        // Simulate all moves and check if king is in check
+        foreach (ChessboardSquare simSquare in availableMoves)
+        {
+            ChessboardSquare kingSquareThisSim = ourKing.currentSquare;
+            // Did we simulate the king's move
+            if (this.pieceType == PieceType.King)
+                kingSquareThisSim = simSquare;
+
+            // Get all attacking pieces
+            List<ChessPieceBase> simAttackingPieces = new List<ChessPieceBase>();
+            foreach (ChessboardSquare square in squares)
+                if (square != null)
+                    if (square.pieceOnTop != null)
+                        if (square.pieceOnTop.isWhite != this.isWhite)
+                            simAttackingPieces.Add(square.pieceOnTop);
+
+            // If simulated move eliminates an enemy piece, remove it from attacking list and also save it for restoring
+            ChessPieceBase eliminatedPiece = null;
+            if (simSquare.pieceOnTop != null)
+            {
+                eliminatedPiece = simSquare.pieceOnTop;
+                if (simAttackingPieces.Contains(eliminatedPiece))
+                    simAttackingPieces.Remove(eliminatedPiece);
+            }
+
+            // Simulate that move
+            actualSquare.pieceOnTop = null;
+            simSquare.pieceOnTop = this;
+
+            // Get all simulated attacking pieces' moves
+            List<ChessboardSquare> simAttackingMoves = new List<ChessboardSquare>();
+            foreach(ChessPieceBase attackingPiece in simAttackingPieces)
+            {
+                List<ChessboardSquare> pieceMoves = attackingPiece.GetAvailableMoves(attackingPiece.pieceType, ref squares);
+                foreach(ChessboardSquare pieceMove in pieceMoves)
+                if (!simAttackingMoves.Contains(pieceMove))
+                        simAttackingMoves.Add(pieceMove);
+            }
+
+            // Does the king's square appear in the attacking pieces' moves? If so, add that square to movesToRemove
+            if (simAttackingMoves.Contains(kingSquareThisSim))
+                movesToRemove.Add(simSquare);
+
+            // Restore board
+            actualSquare.pieceOnTop = this;
+            if (eliminatedPiece != null)
+                simSquare.pieceOnTop = eliminatedPiece;
+            else 
+                simSquare.pieceOnTop = null;
+        }
+
+        // Remove from the availableMoves list
+        foreach (ChessboardSquare square in movesToRemove)
+        {
+            availableMoves.Remove(square);
+        }
+    }
+
+    // Move piece on the board
+    public void MoveTo(ChessboardSquare targetSquare)
+    {
+        targetSquare.PlaceChessPiece(this);
+
+        chessboard.moveList.Add(new ChessboardSquare[] { currentSquare, targetSquare });
+
+        currentSquare.EmptySquare();
+        currentSquare = targetSquare;
+
+        if (!hasMoved)
+            hasMoved = true;
+
+        // Function call to prevent further interaction with pieces -> press chess clock to end turn
+        gameManager.SwitchTurn(gameManager.isWhiteTurn);
+
+        ProcessSpecialMove();
     }
 }

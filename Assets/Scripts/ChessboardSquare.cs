@@ -45,17 +45,6 @@ public class ChessboardSquare : MonoBehaviour
 
         m_TintPropertyBlock = new MaterialPropertyBlock();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     // Function for instantiating pieces at game start/reset, all pieces should be deleted before calling these
     public void InstantiateChessPiece()

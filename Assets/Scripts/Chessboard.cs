@@ -19,12 +19,6 @@ public class Chessboard : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void InstantiatePieces()
     {
         foreach (ChessboardSquare square in squares)
