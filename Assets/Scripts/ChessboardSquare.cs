@@ -28,8 +28,8 @@ public class ChessboardSquare : MonoBehaviour
     public ChessPieceBase pieceOnTop;
 
     // Piece placing
-    [SerializeField] private float piecePlaceOffset = 0.0055f;
-    private Vector3 placePiecePos;
+    private float piecePlaceOffset = 2.2f;
+    private Transform piecePlaceTransform;
 
     // Square Highlighting
     public HighlightColour currentHighlight;
@@ -39,8 +39,9 @@ public class ChessboardSquare : MonoBehaviour
 
     private void Awake()
     {
-        Vector3 worldPos = transform.position;
-        placePiecePos = new Vector3(worldPos.x, worldPos.y + piecePlaceOffset, worldPos.z);
+        piecePlaceTransform = new GameObject("PiecePlacePos").transform;
+        piecePlaceTransform.parent = transform;
+        piecePlaceTransform.localPosition = new Vector3(0, piecePlaceOffset, 0);
 
         m_TintPropertyBlock = new MaterialPropertyBlock();
     }
@@ -61,7 +62,7 @@ public class ChessboardSquare : MonoBehaviour
     {
         if (pieceToInstantiate != null)
         {
-            GameObject instantiatedPiece = Instantiate(pieceToInstantiate, placePiecePos, transform.localRotation);
+            GameObject instantiatedPiece = Instantiate(pieceToInstantiate, piecePlaceTransform.position, transform.localRotation);
             pieceOnTop = instantiatedPiece.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
@@ -74,14 +75,14 @@ public class ChessboardSquare : MonoBehaviour
         
         if (Y == 8)
         {
-            GameObject queen = Instantiate(chessboard.squares[4, 1].PieceToInstantiate, placePiecePos, transform.localRotation); // White Queen
+            GameObject queen = Instantiate(chessboard.squares[4, 1].PieceToInstantiate, piecePlaceTransform.position, transform.localRotation); // White Queen
             pieceOnTop = queen.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
         }
         else
         {
-            GameObject queen = Instantiate(chessboard.squares[4, 8].PieceToInstantiate, placePiecePos, transform.localRotation); // Black Queen
+            GameObject queen = Instantiate(chessboard.squares[4, 8].PieceToInstantiate, piecePlaceTransform.position, transform.localRotation); // Black Queen
             pieceOnTop = queen.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
@@ -98,7 +99,7 @@ public class ChessboardSquare : MonoBehaviour
 
         // Place piece onto square
         pieceOnTop = piece;
-        piece.transform.position = placePiecePos;
+        piece.transform.position = piecePlaceTransform.position;
         piece.transform.rotation = transform.localRotation;
     }
     public void EliminatePieceOnTop()

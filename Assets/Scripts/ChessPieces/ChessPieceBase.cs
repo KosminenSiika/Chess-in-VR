@@ -29,6 +29,9 @@ public class ChessPieceBase : MonoBehaviour
     public Chessboard chessboard;
     public ChessboardSquare currentSquare;
 
+    // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
+    private ChessGameManager gameManager;
+
     public PieceType pieceType;
     public bool isWhite;
     private bool hasMoved = false;
@@ -40,6 +43,7 @@ public class ChessPieceBase : MonoBehaviour
     void Start()
     {
         model.transform.Rotate(0, chessboard.transform.eulerAngles.y, 0);
+        gameManager = FindFirstObjectByType<ChessGameManager>();
     }
 
     // Update is called once per frame
@@ -104,6 +108,7 @@ public class ChessPieceBase : MonoBehaviour
             hasMoved = true;
 
         // Function call to prevent further interaction with pieces -> press chess clock to end turn
+        gameManager.SwitchTurn(gameManager.isWhiteTurn);
 
         ProcessSpecialMove();
     }

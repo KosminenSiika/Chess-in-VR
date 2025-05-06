@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Chessboard : MonoBehaviour
@@ -14,7 +15,6 @@ public class Chessboard : MonoBehaviour
         foreach (ChessboardSquare square in squareArray)
         {
             squares[square.X, square.Y] = square;
-            square.InstantiateChessPiece();
         }
 
     }
@@ -23,5 +23,16 @@ public class Chessboard : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void InstantiatePieces()
+    {
+        foreach (ChessboardSquare square in squares)
+        {
+            if (square != null)
+            {
+                square.InstantiateChessPiece();
+            }
+        }
     }
 }
