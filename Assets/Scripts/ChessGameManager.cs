@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ChessGameManager : MonoBehaviour
 {
+    [SerializeField] private ChessEngineIntegration chessEngineIntegration;
     [SerializeField] private Chessboard chessboard;
     private Vector3 chessboardInitialPosition;
     [SerializeField] private XRDirectInteractor leftInteractor;
@@ -33,13 +35,14 @@ public class ChessGameManager : MonoBehaviour
         chessboardInitialPosition = chessboard.transform.position;
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
         if (!firstGameReset && Time.timeSinceLevelLoad >= 3)
         {
             firstGameReset = true;
-            ResetGame();
+            StartCoroutine(ResetGame());
         }
 
         if (isFirstMoveMade)
@@ -63,8 +66,9 @@ public class ChessGameManager : MonoBehaviour
             }
         }
     }
+    */
 
-    public void ResetGame()
+    public IEnumerator ResetGame()
     {
         isGameOver = false;
         isWhiteTurn = true;
@@ -75,6 +79,9 @@ public class ChessGameManager : MonoBehaviour
         // blackMaxTime = UI element slider value
         whiteCurrentTime = whiteMaxTime;
         blackCurrentTime = blackMaxTime;
+
+        yield return chessEngineIntegration.ResetGame();
+        yield return chessEngineIntegration.SetDifficulty();
 
         if (isPlayerWhite)
         {
@@ -89,7 +96,7 @@ public class ChessGameManager : MonoBehaviour
             rightInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
         }
 
-        EnablePlayerInteractionWithPieces(isPlayerWhite);
+        EnablePlayerInteractionWithPieces(true);
 
         chessboard.transform.position = chessboardInitialPosition;
         chessboard.InstantiatePieces();
@@ -100,11 +107,9 @@ public class ChessGameManager : MonoBehaviour
         isGameOver = true;
         isFirstMoveMade = false;
 
-        // Disable chess engine
-
         // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
-        leftInteractor.enabled = false;
-        rightInteractor.enabled = false;
+        //leftInteractor.enabled = false;
+        //rightInteractor.enabled = false;
 
         EnablePlayerInteractionWithPieces(false);
 
@@ -131,24 +136,64 @@ public class ChessGameManager : MonoBehaviour
         if (isWhiteTurn)
         {
             isWhiteTurn = false;
-            EnablePlayerInteractionWithPieces(!isPlayerWhite);
+            if (isPlayerWhite)
+            {
+                // This should happen before, as SwitchTurn is triggered by the chess clock
+                EnablePlayerInteractionWithPieces(false);
+                // 
+                StartCoroutine(HandleEngineTurn());
+            }
+            else
+            {
+                EnablePlayerInteractionWithPieces(true);
+            }
+            
         }
         else
         {
             isWhiteTurn = true;
-            EnablePlayerInteractionWithPieces(isPlayerWhite);
+            if (isPlayerWhite)
+            {
+                EnablePlayerInteractionWithPieces(true);
+            }
+            else
+            {
+                // Same as above
+                EnablePlayerInteractionWithPieces(false);
+                //
+                StartCoroutine(HandleEngineTurn());
+            }
         }
 
     }
 
+    private IEnumerator HandleEngineTurn()
+    {
+        yield return chessEngineIntegration.FetchNextMove(chessboard.moveList[chessboard.moveList.Count - 1]);
+        
+        if (chessEngineIntegration.nextMove == null)
+        {
+            yield break;
+        }
+
+        ChessboardSquare startSquare = chessEngineIntegration.nextMove[0];
+        ChessboardSquare endSquare = chessEngineIntegration.nextMove[1];
+
+        yield return new WaitForSeconds(3);
+
+        startSquare.pieceOnTop.SetEngineSpecialMove();
+        startSquare.pieceOnTop.MoveTo(endSquare);
+    }
+
     private void EnablePlayerInteractionWithPieces(bool shouldEnable)
     {
-        /*
+        
         leftInteractor.enabled = shouldEnable;
         rightInteractor.enabled = shouldEnable;
-        */
+
 
         // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
+        /*
         if (shouldEnable)
         {
             leftInteractor.interactionLayers = InteractionLayerMask.GetMask("WhitePiece");
@@ -159,6 +204,6 @@ public class ChessGameManager : MonoBehaviour
             leftInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
             rightInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
         }
-
+        */
     }
 }

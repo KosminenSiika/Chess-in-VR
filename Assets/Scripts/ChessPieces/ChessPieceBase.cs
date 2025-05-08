@@ -96,6 +96,12 @@ public class ChessPieceBase : MonoBehaviour
             square.SetSquareHighlight(HighlightColour.None);
     }
 
+    // ChessEngine helpers
+    public void SetEngineSpecialMove()
+    {
+        specialMove = GetSpecialMoves(pieceType, ref chessboard.squares, ref chessboard.moveList);
+    }
+
     // Get moves
     public List<ChessboardSquare> GetAvailableMoves(PieceType pieceType, ref ChessboardSquare[,] squares)
     {
@@ -864,10 +870,10 @@ public class ChessPieceBase : MonoBehaviour
         if (!hasMoved)
             hasMoved = true;
 
+        ProcessSpecialMove();
+
         // Function call to prevent further interaction with pieces -> press chess clock to end turn
         gameManager.SwitchTurn();
-
-        ProcessSpecialMove();
 
         if (!gameManager.isFirstMoveMade)
             gameManager.isFirstMoveMade = true;

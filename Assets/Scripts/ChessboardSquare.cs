@@ -37,6 +37,8 @@ public class ChessboardSquare : MonoBehaviour
     [SerializeField] private Color AvailableColour = Color.cyan;
     [SerializeField] private Color HoveringColour = Color.green;
 
+    public bool justQueened = false;
+
     private void Awake()
     {
         piecePlaceTransform = new GameObject("PiecePlacePos").transform;
@@ -76,6 +78,8 @@ public class ChessboardSquare : MonoBehaviour
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
         }
+
+        justQueened = true;
     }
 
     public void PlaceChessPiece(ChessPieceBase piece)

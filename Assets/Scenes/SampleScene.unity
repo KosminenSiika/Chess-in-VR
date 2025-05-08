@@ -3049,6 +3049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918938838}
   - component: {fileID: 1918938839}
+  - component: {fileID: 1918938840}
   m_Layer: 0
   m_Name: ChessGameManager
   m_TagString: Untagged
@@ -3083,6 +3084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62240323d2e4ca642afe01c683c0054f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chessEngineIntegration: {fileID: 1918938840}
   chessboard: {fileID: 106603460013347108}
   leftInteractor: {fileID: 1853186773}
   rightInteractor: {fileID: 1718871801}
@@ -3095,6 +3097,21 @@ MonoBehaviour:
   isFirstMoveMade: 0
   isGameOver: 0
   difficulty: 0
+--- !u!114 &1918938840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918938837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e1120a1aaf5d44e99874fb3a1b8104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1918938839}
+  chessboard: {fileID: 106603460013347108}
+  nextMove: []
 --- !u!1 &1983775602
 GameObject:
   m_ObjectHideFlags: 0
