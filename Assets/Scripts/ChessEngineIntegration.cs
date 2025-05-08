@@ -12,11 +12,11 @@ public class ChessEngineIntegration : MonoBehaviour
 
     private Process chessEngineProcess;
 
-    private int depth = 2;
-    private string UCIMoveList = "position startpos";
+    private int movetime;
+    public string UCIMoveList = "position startpos moves";
     public string lastLine;
 
-    public ChessboardSquare[] nextMove = null;
+    public bool nextMoveReady = false;
 
     public Dictionary<int, string> ColumnsToLetters = new Dictionary<int, string>()
     {
@@ -45,27 +45,16 @@ public class ChessEngineIntegration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartChessEngine());
+        StartChessEngine();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (chessEngineProcess != null)
-        {
-            chessEngineProcess.StandardOutput.ReadLine();
-            
-            if (lastReadLine != null)
-            {
-                UnityEngine.Debug.Log("Last line was: " + lastReadLine);
-                lastLine = lastReadLine;
-            }   
-        }
-        */
+
     }
 
-    private IEnumerator StartChessEngine()
+    private void StartChessEngine()
     {
         chessEngineProcess = new Process()
         {
@@ -79,124 +68,97 @@ public class ChessEngineIntegration : MonoBehaviour
             }
         };
 
+        chessEngineProcess.OutputDataReceived += new DataReceivedEventHandler(ChessEngineProcess_OutputDataReceived);
         chessEngineProcess.Start();
-        chessEngineProcess.StandardInput.WriteLine("uci");
+        chessEngineProcess.BeginOutputReadLine();
 
-        UnityEngine.Debug.Log("stockfish started");
-
-        yield return CheckIfReady();
+        SendLine("uci");
+        SendLine("isready");
     }
 
-    public IEnumerator ResetGame()
+    public void ResetGame()
     {
-        yield return CheckIfReady();
-
-        chessEngineProcess.StandardInput.WriteLine("ucinewgame");
+        SendLine("ucinewgame");
+        UCIMoveList = "position startpos moves";
     }
 
-    public IEnumerator SetDifficulty()
+    public void SetDifficulty()
     {
-        yield return CheckIfReady();
-
         // Somewhat emulating lichess AI levels: https://lichess.org/forum/lichess-feedback/how-strong-are-the-stockfish-levels
         if (gameManager.difficulty == 1)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 0");
-            depth = 1;
+            SendLine("setoption name Skill Level value 0");
+            movetime = 1;
         }
         else if (gameManager.difficulty == 2)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 0");
-            depth = 3;
+            SendLine("setoption name Skill Level value 0");
+            movetime = 5;
         }
         else if (gameManager.difficulty == 3)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 0");
-            depth = 5;
+            SendLine("setoption name Skill Level value 0");
+            movetime = 10;
         }
         else if (gameManager.difficulty == 4)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 3");
-            depth = 5;
+            SendLine("setoption name Skill Level value 3");
+            movetime = 20;
         }
         else if (gameManager.difficulty == 5)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 6");
-            depth = 5;
+            SendLine("setoption name Skill Level value 6");
+            movetime = 20;
         }
         else if (gameManager.difficulty == 6)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 10");
-            depth = 8;
+            SendLine("setoption name Skill Level value 10");
+            movetime = 30;
         }
         else if (gameManager.difficulty == 7)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 15");
-            depth = 12;
+            SendLine("setoption name Skill Level value 15");
+            movetime = 40;
         }
         else if (gameManager.difficulty == 8)
         {
-            chessEngineProcess.StandardInput.WriteLine("setoption name Skill Level value 20");
-            depth = 15;
+            SendLine("setoption name Skill Level value 20");
+            movetime = 50;
         }
     }
 
     // Get next move from the engine
-    public IEnumerator FetchNextMove(ChessboardSquare[] move)
+    public ChessboardSquare[] FetchNextMove()
     {
-        yield return CheckIfReady();
-
-        yield return ProvidePlayerMove(move);
-
-        StartCoroutine(lastLineReader());
-        yield return new WaitUntil(() => lastLine.StartsWith("bestmove"));
-
         string UCINextMove = lastLine.Substring(9, 4);
 
         UCIMoveList = UCIMoveList + " " + UCINextMove;
 
         if (UCINextMove != "0000")
-            nextMove = UCINotationToChessboardSquares(UCINextMove);
+            return UCINotationToChessboardSquares(UCINextMove);
         else
-            nextMove = null;
+            return null;
         
     }
-    public IEnumerator ProvidePlayerMove(ChessboardSquare[] move)
+    public void ProvidePlayerMove(ChessboardSquare[] move)
     {
         string UCIMove = ChessboardSquaresToUCINotation(move);
 
+        // Add player move to engine's movelist
         UCIMoveList = UCIMoveList + " " + UCIMove;
 
-        yield return CheckIfReady();
-
-        // Write the position
-        chessEngineProcess.StandardInput.Write(UCIMoveList);
-
-        yield return CheckIfReady();
-
+        // Tell the position
+        SendLine(UCIMoveList);
         // Start looking for move
-        chessEngineProcess.StandardInput.Write("go depth " + depth.ToString());
-
+        SendLine("go movetime " + movetime.ToString());
     }
 
-    // Helper to check if chessEngine is ready to receive input
-    public IEnumerator CheckIfReady()
+    public void SearchFirstMove()
     {
-        chessEngineProcess.StandardInput.WriteLine("isready");
-        UnityEngine.Debug.Log("CheckIfReady called");
-        StartCoroutine(lastLineReader());
-        yield return new WaitUntil(() => lastLine == "readyok");
-        UnityEngine.Debug.Log("readyok received");
-    }
-    public IEnumerator lastLineReader()
-    {
-        while (chessEngineProcess.StandardOutput.ReadLine() != null)
-        {
-            lastLine = chessEngineProcess.StandardOutput.ReadLine();
-            UnityEngine.Debug.Log("Last line: " + lastLine);
-        }
-
-        yield return null;
+        // Tell the position
+        SendLine(UCIMoveList);
+        // Start looking for move
+        SendLine("go movetime " + movetime.ToString());
     }
 
     // Move notation exchangers
@@ -227,6 +189,15 @@ public class ChessEngineIntegration : MonoBehaviour
     {
         chessEngineProcess.StandardInput.WriteLine(command);
         chessEngineProcess.StandardInput.Flush();
+    }
+    private void ChessEngineProcess_OutputDataReceived(object sender, DataReceivedEventArgs e)
+    {
+        lastLine = e.Data;
+
+        if (lastLine.StartsWith("bestmove"))
+            nextMoveReady = true;
+        else 
+            nextMoveReady = false;
     }
     private void OnApplicationQuit()
     {

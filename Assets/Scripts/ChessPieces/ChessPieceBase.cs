@@ -872,13 +872,15 @@ public class ChessPieceBase : MonoBehaviour
 
         ProcessSpecialMove();
 
-        // Function call to prevent further interaction with pieces -> press chess clock to end turn
-        gameManager.SwitchTurn();
-
         if (!gameManager.isFirstMoveMade)
             gameManager.isFirstMoveMade = true;
 
         if (CheckForCheckmate())
             gameManager.WinGame(isWhite, true);
+        else
+        {
+            // Function call to prevent further interaction with pieces -> press chess clock to end turn
+            gameManager.SwitchTurn();
+        }
     }
 }

@@ -35,14 +35,13 @@ public class ChessGameManager : MonoBehaviour
         chessboardInitialPosition = chessboard.transform.position;
     }
 
-    /*
     // Update is called once per frame
     void Update()
     {
         if (!firstGameReset && Time.timeSinceLevelLoad >= 3)
         {
             firstGameReset = true;
-            StartCoroutine(ResetGame());
+            ResetGame();
         }
 
         if (isFirstMoveMade)
@@ -66,9 +65,8 @@ public class ChessGameManager : MonoBehaviour
             }
         }
     }
-    */
 
-    public IEnumerator ResetGame()
+    public void ResetGame()
     {
         isGameOver = false;
         isWhiteTurn = true;
@@ -80,8 +78,8 @@ public class ChessGameManager : MonoBehaviour
         whiteCurrentTime = whiteMaxTime;
         blackCurrentTime = blackMaxTime;
 
-        yield return chessEngineIntegration.ResetGame();
-        yield return chessEngineIntegration.SetDifficulty();
+        chessEngineIntegration.ResetGame();
+        chessEngineIntegration.SetDifficulty();
 
         if (isPlayerWhite)
         {
@@ -94,9 +92,10 @@ public class ChessGameManager : MonoBehaviour
             chessboard.transform.eulerAngles = new Vector3(0, 180, 0);
             leftInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
             rightInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
+            StartCoroutine(HandleEngineTurn());
         }
 
-        EnablePlayerInteractionWithPieces(true);
+        EnablePlayerInteractionWithPieces(isPlayerWhite);
 
         chessboard.transform.position = chessboardInitialPosition;
         chessboard.InstantiatePieces();
@@ -169,15 +168,22 @@ public class ChessGameManager : MonoBehaviour
 
     private IEnumerator HandleEngineTurn()
     {
-        yield return chessEngineIntegration.FetchNextMove(chessboard.moveList[chessboard.moveList.Count - 1]);
+        if (isFirstMoveMade)
+            chessEngineIntegration.ProvidePlayerMove(chessboard.moveList[chessboard.moveList.Count - 1]);
+        else
+            chessEngineIntegration.SearchFirstMove();
+
+        yield return new WaitUntil(() => chessEngineIntegration.nextMoveReady);
+    
+        ChessboardSquare[] nextMove = chessEngineIntegration.FetchNextMove();
         
-        if (chessEngineIntegration.nextMove == null)
+        if (nextMove == null)
         {
             yield break;
         }
 
-        ChessboardSquare startSquare = chessEngineIntegration.nextMove[0];
-        ChessboardSquare endSquare = chessEngineIntegration.nextMove[1];
+        ChessboardSquare startSquare = nextMove[0];
+        ChessboardSquare endSquare = nextMove[1];
 
         yield return new WaitForSeconds(3);
 
@@ -187,7 +193,6 @@ public class ChessGameManager : MonoBehaviour
 
     private void EnablePlayerInteractionWithPieces(bool shouldEnable)
     {
-        
         leftInteractor.enabled = shouldEnable;
         rightInteractor.enabled = shouldEnable;
 

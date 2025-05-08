@@ -3093,10 +3093,10 @@ MonoBehaviour:
   whiteCurrentTime: 0
   blackCurrentTime: 0
   isWhiteTurn: 1
-  isPlayerWhite: 1
+  isPlayerWhite: 0
   isFirstMoveMade: 0
   isGameOver: 0
-  difficulty: 0
+  difficulty: 1
 --- !u!114 &1918938840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,7 +3111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1918938839}
   chessboard: {fileID: 106603460013347108}
-  nextMove: []
+  UCIMoveList: position startpos
+  lastLine: 
+  nextMoveReady: 0
 --- !u!1 &1983775602
 GameObject:
   m_ObjectHideFlags: 0
