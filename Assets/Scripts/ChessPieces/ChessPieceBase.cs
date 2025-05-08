@@ -35,7 +35,7 @@ public class ChessPieceBase : MonoBehaviour
     public PieceType pieceType;
     public bool isWhite;
     private bool hasMoved = false;
-    private SpecialMove specialMove;
+    private SpecialMove specialMove = SpecialMove.None;
 
     private List<ChessboardSquare> availableMoves = new List<ChessboardSquare>();
 
@@ -717,6 +717,7 @@ public class ChessPieceBase : MonoBehaviour
         foreach (ChessboardSquare simSquare in availableMoves)
         {
             ChessboardSquare kingSquareThisSim = ourKing.currentSquare;
+            
             // Did we simulate the king's move
             if (this.pieceType == PieceType.King)
                 kingSquareThisSim = simSquare;
@@ -767,7 +768,33 @@ public class ChessPieceBase : MonoBehaviour
         // Remove from the availableMoves list
         foreach (ChessboardSquare square in movesToRemove)
         {
-            availableMoves.Remove(square);
+            availableMoves.Remove(square);    
+        }
+
+        // Also remove castling middle square if applicable
+        if (specialMove == SpecialMove.Castling)
+        {
+            // White team 
+            // Right
+            if (movesToRemove.Contains(squares[6, 1]))
+                if (availableMoves.Contains(squares[7, 1]))
+                    availableMoves.Remove(squares[7, 1]);
+
+            // Left
+            if (movesToRemove.Contains(squares[4, 1]))
+                if (availableMoves.Contains(squares[3, 1]))
+                    availableMoves.Remove(squares[3, 1]);
+
+            // Black team
+            // Right
+            if (movesToRemove.Contains(squares[6, 8]))
+                if (availableMoves.Contains(squares[7, 8]))
+                    availableMoves.Remove(squares[7, 8]);
+
+            // Left
+            if (movesToRemove.Contains(squares[4, 8]))
+                if (availableMoves.Contains(squares[3, 8]))
+                    availableMoves.Remove(squares[3, 8]);
         }
     }
 
@@ -838,7 +865,7 @@ public class ChessPieceBase : MonoBehaviour
             hasMoved = true;
 
         // Function call to prevent further interaction with pieces -> press chess clock to end turn
-        gameManager.SwitchTurn(gameManager.isWhiteTurn);
+        gameManager.SwitchTurn();
 
         ProcessSpecialMove();
 

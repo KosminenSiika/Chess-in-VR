@@ -102,6 +102,7 @@ public class ChessGameManager : MonoBehaviour
 
         // Disable chess engine
 
+        // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
         leftInteractor.enabled = false;
         rightInteractor.enabled = false;
 
@@ -125,9 +126,9 @@ public class ChessGameManager : MonoBehaviour
         Debug.Log("Black team time left: " + blackCurrentTime);
     }
 
-    public void SwitchTurn(bool isPrevTurnWhite)
+    public void SwitchTurn()
     {
-        if (isPrevTurnWhite)
+        if (isWhiteTurn)
         {
             isWhiteTurn = false;
             EnablePlayerInteractionWithPieces(!isPlayerWhite);
