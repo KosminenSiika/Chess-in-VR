@@ -12,7 +12,7 @@ public class ChessEngineIntegration : MonoBehaviour
 
     private Process chessEngineProcess;
 
-    private int movetime;
+    private int depth;
     public string UCIMoveList = "position startpos moves";
     public string lastLine;
 
@@ -60,7 +60,7 @@ public class ChessEngineIntegration : MonoBehaviour
         {
             StartInfo = new ProcessStartInfo
             {
-                FileName = Application.streamingAssetsPath + "/stockfish",
+                FileName = Application.streamingAssetsPath + "/fairy-stockfish",
                 RedirectStandardInput = true,
                 RedirectStandardOutput = true,
                 UseShellExecute = false,
@@ -84,46 +84,46 @@ public class ChessEngineIntegration : MonoBehaviour
 
     public void SetDifficulty()
     {
-        // Somewhat emulating lichess AI levels: https://lichess.org/forum/lichess-feedback/how-strong-are-the-stockfish-levels
+        // Emulating lichess AI levels: https://lichess.org/forum/lichess-feedback/how-strong-are-the-stockfish-levels
         if (gameManager.difficulty == 1)
         {
-            SendLine("setoption name Skill Level value 0");
-            movetime = 1;
+            SendLine("setoption name Skill Level value -9");
+            depth = 5;
         }
         else if (gameManager.difficulty == 2)
         {
-            SendLine("setoption name Skill Level value 0");
-            movetime = 5;
+            SendLine("setoption name Skill Level value -5");
+            depth = 5;
         }
         else if (gameManager.difficulty == 3)
         {
-            SendLine("setoption name Skill Level value 0");
-            movetime = 10;
+            SendLine("setoption name Skill Level value -1");
+            depth = 5;
         }
         else if (gameManager.difficulty == 4)
         {
             SendLine("setoption name Skill Level value 3");
-            movetime = 20;
+            depth = 5;
         }
         else if (gameManager.difficulty == 5)
         {
-            SendLine("setoption name Skill Level value 6");
-            movetime = 20;
+            SendLine("setoption name Skill Level value 7");
+            depth = 5;
         }
         else if (gameManager.difficulty == 6)
         {
-            SendLine("setoption name Skill Level value 10");
-            movetime = 30;
+            SendLine("setoption name Skill Level value 11");
+            depth = 8;
         }
         else if (gameManager.difficulty == 7)
         {
             SendLine("setoption name Skill Level value 15");
-            movetime = 40;
+            depth = 13;
         }
         else if (gameManager.difficulty == 8)
         {
             SendLine("setoption name Skill Level value 20");
-            movetime = 50;
+            depth = 22;
         }
     }
 
@@ -150,7 +150,7 @@ public class ChessEngineIntegration : MonoBehaviour
         // Tell the position
         SendLine(UCIMoveList);
         // Start looking for move
-        SendLine("go movetime " + movetime.ToString());
+        SendLine("go depth " + depth.ToString());
     }
 
     public void SearchFirstMove()
@@ -158,7 +158,7 @@ public class ChessEngineIntegration : MonoBehaviour
         // Tell the position
         SendLine(UCIMoveList);
         // Start looking for move
-        SendLine("go movetime " + movetime.ToString());
+        SendLine("go depth " + depth.ToString());
     }
 
     // Move notation exchangers
