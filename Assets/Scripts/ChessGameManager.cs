@@ -84,14 +84,14 @@ public class ChessGameManager : MonoBehaviour
         if (isPlayerWhite)
         {
             chessboard.transform.eulerAngles = Vector3.zero;
-            leftInteractor.interactionLayers = InteractionLayerMask.GetMask("WhitePiece");
-            rightInteractor.interactionLayers = InteractionLayerMask.GetMask("WhitePiece");
+            leftInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "WhitePiece", "ChessClock" });
+            rightInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "WhitePiece", "ChessClock" });
         }
         else
         {
             chessboard.transform.eulerAngles = new Vector3(0, 180, 0);
-            leftInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
-            rightInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
+            leftInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "BlackPiece", "ChessClock" });
+            rightInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "BlackPiece", "ChessClock" });
             StartCoroutine(HandleEngineTurn());
         }
 
@@ -137,9 +137,6 @@ public class ChessGameManager : MonoBehaviour
             isWhiteTurn = false;
             if (isPlayerWhite)
             {
-                // This should happen before, as SwitchTurn is triggered by the chess clock
-                EnablePlayerInteractionWithPieces(false);
-                // 
                 StartCoroutine(HandleEngineTurn());
             }
             else
@@ -157,9 +154,6 @@ public class ChessGameManager : MonoBehaviour
             }
             else
             {
-                // Same as above
-                EnablePlayerInteractionWithPieces(false);
-                //
                 StartCoroutine(HandleEngineTurn());
             }
         }
@@ -189,26 +183,28 @@ public class ChessGameManager : MonoBehaviour
 
         startSquare.pieceOnTop.SetEngineSpecialMove();
         startSquare.pieceOnTop.MoveTo(endSquare);
+
+        startSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
+        endSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
     }
 
-    private void EnablePlayerInteractionWithPieces(bool shouldEnable)
+    public void EnablePlayerInteractionWithPieces(bool shouldEnable)
     {
-        leftInteractor.enabled = shouldEnable;
-        rightInteractor.enabled = shouldEnable;
-
-
-        // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
-        /*
         if (shouldEnable)
-        {
-            leftInteractor.interactionLayers = InteractionLayerMask.GetMask("WhitePiece");
-            rightInteractor.interactionLayers = InteractionLayerMask.GetMask("WhitePiece");
-        }
+            if (isPlayerWhite)
+            {
+                leftInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "WhitePiece", "ChessClock" });
+                rightInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "WhitePiece", "ChessClock" });
+            }
+            else
+            {
+                leftInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "BlackPiece", "ChessClock" });
+                rightInteractor.interactionLayers = InteractionLayerMask.GetMask(new string[] { "BlackPiece", "ChessClock" });
+            }
         else
         {
-            leftInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
-            rightInteractor.interactionLayers = InteractionLayerMask.GetMask("BlackPiece");
+            leftInteractor.interactionLayers = InteractionLayerMask.GetMask("ChessClock");
+            rightInteractor.interactionLayers = InteractionLayerMask.GetMask("ChessClock");
         }
-        */
     }
 }

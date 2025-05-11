@@ -5,11 +5,14 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+// Used for both squares and pieces
 public enum HighlightColour
 {
     None,
     Available,
     Hovering,
+    InCheck,
+    EngineLastMove,
 }
 
 public class ChessboardSquare : MonoBehaviour
@@ -32,10 +35,12 @@ public class ChessboardSquare : MonoBehaviour
     private Transform piecePlaceTransform;
 
     // Square Highlighting
+    public bool isEngineLastMove;
     public HighlightColour currentHighlight;
     private MaterialPropertyBlock m_TintPropertyBlock;
     [SerializeField] private Color AvailableColour = Color.cyan;
     [SerializeField] private Color HoveringColour = Color.green;
+    [SerializeField] private Color EngineLastMoveColour = Color.red;
 
     public bool justQueened = false;
 
@@ -119,6 +124,11 @@ public class ChessboardSquare : MonoBehaviour
             emissionColour = AvailableColour * Mathf.LinearToGammaSpace(1f);
         else if (highlightColour == HighlightColour.Hovering)
             emissionColour = HoveringColour * Mathf.LinearToGammaSpace(1f);
+        else if (highlightColour == HighlightColour.EngineLastMove)
+        {
+            emissionColour = EngineLastMoveColour * Mathf.LinearToGammaSpace(1f);
+            isEngineLastMove = true;
+        }
         else
             emissionColour = Color.black;
 
@@ -138,7 +148,7 @@ public class ChessboardSquare : MonoBehaviour
             m_TintPropertyBlock.SetColor(Shader.PropertyToID("_EmissionColor"), emissionColour);
             render.SetPropertyBlock(m_TintPropertyBlock);
         }
-
+ 
         currentHighlight = highlightColour;
     }
 

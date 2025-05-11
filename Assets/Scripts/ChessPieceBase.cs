@@ -29,7 +29,6 @@ public class ChessPieceBase : MonoBehaviour
     public Chessboard chessboard;
     public ChessboardSquare currentSquare;
 
-    // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
     private ChessGameManager gameManager;
 
     public PieceType pieceType;
@@ -93,7 +92,10 @@ public class ChessPieceBase : MonoBehaviour
 
         // Clear highlights
         foreach (ChessboardSquare square in availableMoves)
-            square.SetSquareHighlight(HighlightColour.None);
+            if (square.isEngineLastMove)
+                square.SetSquareHighlight(HighlightColour.EngineLastMove);
+            else
+                square.SetSquareHighlight(HighlightColour.None);
     }
 
     // ChessEngine helpers
@@ -837,8 +839,8 @@ public class ChessPieceBase : MonoBehaviour
         // Is the king in check? (in the attacking moves list)
         if (attackingMoves.Contains(targetKing.currentSquare))
         {
-            // TODO: Add red tint to king
-            Debug.Log("Check!");
+            // Highlight target king as InCheck
+            targetKing.GetComponent<PieceHighlightHandler>().SetInCheckHighlight();
 
             // Can the king be defended?
             foreach (ChessPieceBase defendingPiece in defendingPieces)
@@ -860,6 +862,8 @@ public class ChessPieceBase : MonoBehaviour
     // Move piece on the board
     public void MoveTo(ChessboardSquare targetSquare)
     {
+        gameManager.EnablePlayerInteractionWithPieces(false);
+
         targetSquare.PlaceChessPiece(this);
 
         chessboard.moveList.Add(new ChessboardSquare[] { currentSquare, targetSquare });
@@ -874,6 +878,8 @@ public class ChessPieceBase : MonoBehaviour
 
         if (!gameManager.isFirstMoveMade)
             gameManager.isFirstMoveMade = true;
+
+        chessboard.ClearAllHighlights();
 
         if (CheckForCheckmate())
             gameManager.WinGame(isWhite, true);

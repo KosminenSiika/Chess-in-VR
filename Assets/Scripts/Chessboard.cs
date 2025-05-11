@@ -13,20 +13,33 @@ public class Chessboard : MonoBehaviour
     {
         ChessboardSquare[] squareArray = GetComponentsInChildren<ChessboardSquare>();
         foreach (ChessboardSquare square in squareArray)
-        {
             squares[square.X, square.Y] = square;
-        }
 
     }
 
     public void InstantiatePieces()
     {
         foreach (ChessboardSquare square in squares)
-        {
+            if (square != null)
+                square.InstantiateChessPiece();
+    }
+
+    public void ClearAllHighlights()
+    {
+        foreach (ChessboardSquare square in squares)
             if (square != null)
             {
-                square.InstantiateChessPiece();
+                square.isEngineLastMove = false;
+
+                if (square.currentHighlight != HighlightColour.None)
+                    square.SetSquareHighlight(HighlightColour.None);
+
+                if (square.pieceOnTop != null)
+                {
+                    PieceHighlightHandler highlightHandler = square.pieceOnTop.GetComponent<PieceHighlightHandler>();
+                    if (highlightHandler.currentHighlight != HighlightColour.None)
+                        highlightHandler.SetNoHighlight();
+                }
             }
-        }
     }
 }

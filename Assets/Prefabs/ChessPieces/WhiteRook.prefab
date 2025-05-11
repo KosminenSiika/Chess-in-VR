@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: -698930822698320171}
   - component: {fileID: -5168265042908596864}
   - component: {fileID: 7505420095331618204}
-  - component: {fileID: -8344627296336389797}
+  - component: {fileID: 7738539807839206648}
   m_Layer: 0
   m_Name: WhiteRook
   m_TagString: Untagged
@@ -470,7 +470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 5150271452100570710}
   chessboard: {fileID: 0}
-  previousSquare: {fileID: 0}
   currentSquare: {fileID: 0}
   pieceType: 1
   isWhite: 1
@@ -539,10 +538,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7738539807839206648}
+        m_TargetAssemblyTypeName: PieceHighlightHandler, Assembly-CSharp
+        m_MethodName: SetHoveringHighlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7738539807839206648}
+        m_TargetAssemblyTypeName: PieceHighlightHandler, Assembly-CSharp
+        m_MethodName: SetPreviousHighlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -677,7 +700,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &-8344627296336389797
+--- !u!114 &7738539807839206648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -686,20 +709,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3305482362731247271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c69b8a1b6a444a9177914f77cf7d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 08459a5769c36334997ea34ff1702103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TintColor: {r: 0, g: 1, b: 1, a: 0.5019608}
-  m_TintOnHover: 1
-  m_TintOnSelection: 0
-  m_TintRenderers:
-  - {fileID: 9194734035450594257}
-  - {fileID: 8446673014326575544}
-  - {fileID: 3034134687104500611}
-  - {fileID: 925429126601116566}
-  - {fileID: 6759491447784641630}
-  - {fileID: 5839410964197234443}
-  - {fileID: 8832171939878298423}
+  HoveringColour: {r: 0.5019608, g: 1, b: 1, a: 1}
+  InCheckColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4510719459601585316
 GameObject:
   m_ObjectHideFlags: 0
