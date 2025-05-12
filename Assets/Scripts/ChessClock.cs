@@ -6,6 +6,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ChessClock : MonoBehaviour
 {
+    public static int[] SecondsToHHMMSS(float totalSeconds)
+    {
+        int hours = Mathf.FloorToInt(totalSeconds / 3600);
+        int minutes = Mathf.FloorToInt((totalSeconds - (hours * 3600)) / 60);
+        int seconds = Mathf.FloorToInt(totalSeconds - (hours * 3600) - (minutes * 60));
+
+        return new int[] { hours, minutes, seconds };
+    }
+
     [SerializeField] private ChessGameManager gameManager;
 
     [SerializeField] private XRSimpleInteractable interactableScript;
@@ -46,24 +55,22 @@ public class ChessClock : MonoBehaviour
         else
             botTime = gameManager.whiteCurrentTime;
 
-        int botHours = Mathf.FloorToInt(botTime / 3600);
-        int botMinutes = Mathf.FloorToInt((botTime - (botHours * 3600)) / 60);
-        int botSeconds = Mathf.FloorToInt(botTime - (botHours * 3600) - (botMinutes * 60));
-        
-        if (botHours < 10)
-            botHH.SetText("0" + botHours.ToString());
-        else
-            botHH.SetText(botHours.ToString());
+        int[] times = SecondsToHHMMSS(botTime);
 
-        if (botMinutes < 10) 
-            botMM.SetText("0" + botMinutes.ToString());
+        if (times[0] < 10)
+            botHH.SetText("0" + times[0].ToString());
         else
-            botMM.SetText(botMinutes.ToString());
+            botHH.SetText(times[0].ToString());
 
-        if (botSeconds < 10)
-            botSS.SetText("0" + botSeconds.ToString());
+        if (times[1] < 10) 
+            botMM.SetText("0" + times[1].ToString());
         else
-            botSS.SetText(botSeconds.ToString());
+            botMM.SetText(times[1].ToString());
+
+        if (times[2] < 10)
+            botSS.SetText("0" + times[2].ToString());
+        else
+            botSS.SetText(times[2].ToString());
     }
     private void UpdatePlayerTimes()
     {
@@ -72,24 +79,22 @@ public class ChessClock : MonoBehaviour
         else
             playerTime = gameManager.blackCurrentTime;
 
-        int playerHours = Mathf.FloorToInt(playerTime / 3600);
-        int playerMinutes = Mathf.FloorToInt((playerTime - (playerHours * 3600)) / 60);
-        int playerSeconds = Mathf.FloorToInt(playerTime - (playerHours * 3600) - (playerMinutes * 60));
+        int[] times = SecondsToHHMMSS(playerTime);
 
-        if (playerHours < 10)
-            playerHH.SetText("0" + playerHours.ToString());
+        if (times[0] < 10)
+            botHH.SetText("0" + times[0].ToString());
         else
-            playerHH.SetText(playerHours.ToString());
+            botHH.SetText(times[0].ToString());
 
-        if (playerMinutes < 10)
-            playerMM.SetText("0" + playerMinutes.ToString());
+        if (times[1] < 10)
+            botMM.SetText("0" + times[1].ToString());
         else
-            playerMM.SetText(playerMinutes.ToString());
+            botMM.SetText(times[1].ToString());
 
-        if (playerSeconds < 10)
-            playerSS.SetText("0" + playerSeconds.ToString());
+        if (times[2] < 10)
+            botSS.SetText("0" + times[2].ToString());
         else
-            playerSS.SetText(playerSeconds.ToString());
+            botSS.SetText(times[2].ToString());
     }
 
     public void EndPlayerTurn()
