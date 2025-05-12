@@ -20,7 +20,7 @@ public class ChessGameManager : MonoBehaviour
     public bool isWhiteTurn = true;
     public bool isPlayerWhite = true;
     public bool isFirstMoveMade = false;
-    public bool isGameOver = false;
+    public bool isGameOver = true;
 
     public int difficulty = 0;
 
@@ -80,6 +80,8 @@ public class ChessGameManager : MonoBehaviour
 
         chessEngineIntegration.ResetGame();
         chessEngineIntegration.SetDifficulty();
+
+        chessboard.moveList.Clear();
 
         if (isPlayerWhite)
         {
@@ -173,19 +175,24 @@ public class ChessGameManager : MonoBehaviour
         
         if (nextMove == null)
         {
+            Debug.LogWarning("Engine's next move was a nullmove");
             yield break;
         }
 
         ChessboardSquare startSquare = nextMove[0];
         ChessboardSquare endSquare = nextMove[1];
 
-        yield return new WaitForSeconds(3);
+        // Simulate engine thinking time
+        float waitTime = Random.Range(2.0f, 8.0f);
+        yield return new WaitForSeconds(waitTime);
 
         startSquare.pieceOnTop.SetEngineSpecialMove();
         startSquare.pieceOnTop.MoveTo(endSquare);
 
         startSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
         endSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
+
+        SwitchTurn();
     }
 
     public void EnablePlayerInteractionWithPieces(bool shouldEnable)

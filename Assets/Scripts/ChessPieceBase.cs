@@ -30,6 +30,7 @@ public class ChessPieceBase : MonoBehaviour
     public ChessboardSquare currentSquare;
 
     private ChessGameManager gameManager;
+    private ChessClock chessClock;
 
     public PieceType pieceType;
     public bool isWhite;
@@ -43,6 +44,7 @@ public class ChessPieceBase : MonoBehaviour
     {
         model.transform.Rotate(0, chessboard.transform.eulerAngles.y, 0);
         gameManager = FindFirstObjectByType<ChessGameManager>();
+        chessClock = FindFirstObjectByType<ChessClock>();
     }
 
     // Interaction with player's interactors
@@ -883,10 +885,9 @@ public class ChessPieceBase : MonoBehaviour
 
         if (CheckForCheckmate())
             gameManager.WinGame(isWhite, true);
-        else
+        else if (gameManager.isPlayerWhite == gameManager.isWhiteTurn)
         {
-            // Function call to prevent further interaction with pieces -> press chess clock to end turn
-            gameManager.SwitchTurn();
+            chessClock.EnableChessClockInteractable(true);
         }
     }
 }
