@@ -883,6 +883,7 @@ public class ChessPieceBase : MonoBehaviour
 
         chessboard.ClearAllHighlights();
 
+        // Check for checkmate: if game doesn't end and it's the player's turn, make the chess clock interactable
         if (CheckForCheckmate())
             gameManager.WinGame(isWhite, true);
         else if (gameManager.isPlayerWhite == gameManager.isWhiteTurn)
