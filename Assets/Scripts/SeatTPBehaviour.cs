@@ -20,7 +20,6 @@ public class SeatTPBehaviour : MonoBehaviour
         chair.GetComponent<TeleportationAnchor>().enabled = false;
 
         moveProvider.enabled = false;
-        turnProvider.enabled = false;
         //characterControllerDriver.enabled = false;
         characterController.enabled = false;
     }
@@ -31,7 +30,6 @@ public class SeatTPBehaviour : MonoBehaviour
         chair.GetComponent<TeleportationAnchor>().enabled = true;
 
         moveProvider.enabled = true;
-        turnProvider.enabled = true;
         characterController.enabled = true;
         //characterControllerDriver.enabled = true;
     }
