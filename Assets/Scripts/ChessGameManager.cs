@@ -36,6 +36,7 @@ public class ChessGameManager : MonoBehaviour
     public bool isPlayerWhite = true;
     public bool isFirstMoveMade = false;
     public bool isGameOver = true;
+    public bool isPieceMovedThisTurn = false;
 
     public int difficulty = 0;
 
@@ -92,6 +93,7 @@ public class ChessGameManager : MonoBehaviour
         chessEngineIntegration.nextMoveReady = false;
         isWhiteTurn = true;
         isFirstMoveMade = false;
+        isPieceMovedThisTurn = false;
         isPlayerWhite = gameSettings.playerWhiteToggle.isOn;
         difficulty = (int)gameSettings.difficultySlider.value;
         whiteMaxTime =  (int)(gameSettings.whiteHourSlider.value * 3600 + gameSettings.whiteMinuteSlider.value * 60);
@@ -163,7 +165,6 @@ public class ChessGameManager : MonoBehaviour
             {
                 EnablePlayerInteractionWithPieces(true);
             }
-            
         }
         else
         {
@@ -178,6 +179,7 @@ public class ChessGameManager : MonoBehaviour
             }
         }
 
+        isPieceMovedThisTurn = false;
     }
 
     private IEnumerator HandleEngineTurn()
@@ -252,6 +254,4 @@ public class ChessGameManager : MonoBehaviour
     }
     private void RaiseChessbotMoustache() { chessbotMoustache.transform.localPosition += new Vector3(0, 1, 0); }
     private void LowerChessbotMoustache() { chessbotMoustache.transform.localPosition -= new Vector3(0, 1, 0); }
-
-
 }

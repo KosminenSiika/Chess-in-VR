@@ -24,7 +24,8 @@ public class PieceHighlightHandler : MonoBehaviour
 
     public void SetPreviousHighlight()
     {
-        SetPieceHighlight(previousHighlight);
+        if (!gameManager.isPieceMovedThisTurn)
+            SetPieceHighlight(previousHighlight);
     }
 
     public void SetNoHighlight()

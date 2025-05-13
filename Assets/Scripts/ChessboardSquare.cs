@@ -32,7 +32,7 @@ public class ChessboardSquare : MonoBehaviour
 
     // Piece placing
     private float piecePlaceOffset = 2.2f;
-    private Transform piecePlaceTransform;
+    public Transform piecePlaceTransform { get; private set; }
 
     // Square Highlighting
     public bool isEngineLastMove;
@@ -108,8 +108,7 @@ public class ChessboardSquare : MonoBehaviour
     {
         if (pieceOnTop != null)
         {
-            chessboard.activePieces.Remove(pieceOnTop);
-            Destroy(pieceOnTop.gameObject);
+            chessboard.PositionDeadPiece(pieceOnTop);
         }
         EmptySquare();
     }

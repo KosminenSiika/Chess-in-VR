@@ -866,6 +866,7 @@ public class ChessPieceBase : MonoBehaviour
     // Move piece on the board
     public void MoveTo(ChessboardSquare targetSquare)
     {
+        gameManager.isPieceMovedThisTurn = true;
         gameManager.EnablePlayerInteractionWithPieces(false);
 
         targetSquare.PlaceChessPiece(this);
