@@ -6,15 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ChessClock : MonoBehaviour
 {
-    public static int[] SecondsToHHMMSS(float totalSeconds)
-    {
-        int hours = Mathf.FloorToInt(totalSeconds / 3600);
-        int minutes = Mathf.FloorToInt((totalSeconds - (hours * 3600)) / 60);
-        int seconds = Mathf.FloorToInt(totalSeconds - (hours * 3600) - (minutes * 60));
-
-        return new int[] { hours, minutes, seconds };
-    }
-
     [SerializeField] private ChessGameManager gameManager;
 
     [SerializeField] private XRSimpleInteractable interactableScript;
@@ -55,6 +46,9 @@ public class ChessClock : MonoBehaviour
         else
             botTime = gameManager.whiteCurrentTime;
 
+        if (botTime <= 0)
+            return;
+
         int[] times = SecondsToHHMMSS(botTime);
 
         if (times[0] < 10)
@@ -79,6 +73,9 @@ public class ChessClock : MonoBehaviour
         else
             playerTime = gameManager.blackCurrentTime;
 
+        if (playerTime <= 0)
+            return;
+
         int[] times = SecondsToHHMMSS(playerTime);
 
         if (times[0] < 10)
@@ -95,6 +92,14 @@ public class ChessClock : MonoBehaviour
             playerSS.SetText("0" + times[2].ToString());
         else
             playerSS.SetText(times[2].ToString());
+    }
+    private int[] SecondsToHHMMSS(float totalSeconds)
+    {
+        int hours = Mathf.FloorToInt(totalSeconds / 3600);
+        int minutes = Mathf.FloorToInt((totalSeconds - (hours * 3600)) / 60);
+        int seconds = Mathf.FloorToInt(totalSeconds - (hours * 3600) - (minutes * 60));
+
+        return new int[] { hours, minutes, seconds };
     }
 
     public void EndPlayerTurn()

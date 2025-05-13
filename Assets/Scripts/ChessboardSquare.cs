@@ -62,11 +62,13 @@ public class ChessboardSquare : MonoBehaviour
             pieceOnTop = instantiatedPiece.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
+            chessboard.activePieces.Add(pieceOnTop);
         }
     }
 
     public void HandleQueening()
     {
+        chessboard.activePieces.Remove(pieceOnTop);
         Destroy(pieceOnTop.gameObject);
         
         if (Y == 8)
@@ -75,6 +77,7 @@ public class ChessboardSquare : MonoBehaviour
             pieceOnTop = queen.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
+            chessboard.activePieces.Add(pieceOnTop);
         }
         else
         {
@@ -82,6 +85,7 @@ public class ChessboardSquare : MonoBehaviour
             pieceOnTop = queen.GetComponent<ChessPieceBase>();
             pieceOnTop.currentSquare = this;
             pieceOnTop.chessboard = chessboard;
+            chessboard.activePieces.Add(pieceOnTop);
         }
 
         justQueened = true;
@@ -104,6 +108,7 @@ public class ChessboardSquare : MonoBehaviour
     {
         if (pieceOnTop != null)
         {
+            chessboard.activePieces.Remove(pieceOnTop);
             Destroy(pieceOnTop.gameObject);
         }
         EmptySquare();

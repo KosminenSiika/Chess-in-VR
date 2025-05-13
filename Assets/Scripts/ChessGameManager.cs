@@ -25,8 +25,6 @@ public class ChessGameManager : MonoBehaviour
 
     public int difficulty = 0;
 
-    private bool firstGameReset = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,12 +35,6 @@ public class ChessGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!firstGameReset && Time.timeSinceLevelLoad >= 10)
-        {
-            firstGameReset = true;
-            ResetGame();
-        }
-
         if (isFirstMoveMade)
         {
             if (isWhiteTurn)
@@ -80,6 +72,7 @@ public class ChessGameManager : MonoBehaviour
         chessEngineIntegration.ResetGame();
         chessEngineIntegration.SetDifficulty();
 
+        chessboard.ClearAllHighlights();
         chessboard.moveList.Clear();
 
         if (isPlayerWhite)
@@ -99,7 +92,7 @@ public class ChessGameManager : MonoBehaviour
         EnablePlayerInteractionWithPieces(isPlayerWhite);
 
         chessboard.transform.position = chessboardInitialPosition;
-        chessboard.InstantiatePieces();
+        chessboard.InstantiateNewPieces();
     }
 
     public void WinGame(bool isWhiteTeam, bool isCheckmate)
@@ -165,7 +158,8 @@ public class ChessGameManager : MonoBehaviour
             chessEngineIntegration.SearchFirstMove();
 
         yield return new WaitUntil(() => chessEngineIntegration.nextMoveReady);
-    
+        chessEngineIntegration.nextMoveReady = false;
+        
         ChessboardSquare[] nextMove = chessEngineIntegration.FetchNextMove();
         
         if (nextMove == null)
