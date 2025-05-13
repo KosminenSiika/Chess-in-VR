@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!23 &34133161 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2772521439353420681, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
+  m_PrefabInstance: {fileID: 2479788970465184303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &64197789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,6 +1073,11 @@ MonoBehaviour:
   m_StartingInteractionOverridesMap:
   - groupMember: {fileID: 64197793}
     overrideGroupMembers: []
+--- !u!1 &336126529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2434767287330477224, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
+  m_PrefabInstance: {fileID: 2479788970465184303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &387654294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3538235804097280330, guid: 6aa7e4417f66825469573acf6ac59519, type: 3}
@@ -1117,6 +1127,17 @@ MonoBehaviour:
   m_TintOnSelection: 0
   m_TintRenderers:
   - {fileID: 1741218275}
+--- !u!114 &387654303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6486402112944926178, guid: 6aa7e4417f66825469573acf6ac59519, type: 3}
+  m_PrefabInstance: {fileID: 1175273225204992818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387654294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28894487e4e518e4482df06dedceb3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &658161008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,9 +3340,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettings: {fileID: 1405265423}
   chessEngineIntegration: {fileID: 1918938840}
+  chessClock: {fileID: 387654303}
   chessboard: {fileID: 106603460013347108}
   leftInteractor: {fileID: 1853186773}
   rightInteractor: {fileID: 1718871801}
+  chessbotMoustache: {fileID: 336126529}
+  chessbotScreenRenderer: {fileID: 34133161}
+  winScreenColour: {r: 0, g: 1, b: 0, a: 1}
+  loseScreenColour: {r: 1, g: 0, b: 0, a: 1}
   whiteMaxTime: 600
   blackMaxTime: 3615
   whiteCurrentTime: 0
@@ -4598,7 +4624,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7583883688271836216, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583883688271836216, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583883688271836216, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583883688271836216, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583883688271836216, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8674814101435117786, guid: c30cb89363a01be47ad1bc1dc07041da, type: 3}

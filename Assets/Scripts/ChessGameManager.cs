@@ -6,11 +6,23 @@ public class ChessGameManager : MonoBehaviour
 {
     [SerializeField] private Chessbot5000Settings gameSettings;
     [SerializeField] private ChessEngineIntegration chessEngineIntegration;
+
+    [SerializeField] private ChessClock chessClock;
     [SerializeField] private Chessboard chessboard;
     private Vector3 chessboardInitialPosition;
+
     [SerializeField] private XRDirectInteractor leftInteractor;
     [SerializeField] private XRDirectInteractor rightInteractor;
 
+    // Chessbot Feedback
+    [SerializeField] private GameObject chessbotMoustache;
+    [SerializeField] private MeshRenderer chessbotScreenRenderer;
+    private bool isMoustacheMoving = false;
+    private float moustacheMoveInterval = 0.35f;
+    private float moustacheMoveTimer = 0;
+    [SerializeField] private Color winScreenColour = Color.green;
+    [SerializeField] private Color loseScreenColour = Color.red;
+    private Color defaultScreenColour;
 
     public float whiteMaxTime = 600;
     public float blackMaxTime = 600;
@@ -30,6 +42,7 @@ public class ChessGameManager : MonoBehaviour
     {
         EnablePlayerInteractionWithPieces(false);
         chessboardInitialPosition = chessboard.transform.position;
+        defaultScreenColour = chessbotScreenRenderer.material.color;
     }
 
     // Update is called once per frame
@@ -46,15 +59,26 @@ public class ChessGameManager : MonoBehaviour
                 blackCurrentTime -= Time.deltaTime;
             }
 
-            if (whiteCurrentTime <= 0)
+            if (whiteCurrentTime < 0)
             {
                 WinGame(false, false);
             }
-            if (blackCurrentTime <= 0)
+            if (blackCurrentTime < 0)
             {
                 WinGame(true, false);
             }
         }
+
+        if (isMoustacheMoving || chessbotMoustache.transform.localPosition.y == 1)
+        {
+            if (moustacheMoveTimer < moustacheMoveInterval)
+                moustacheMoveTimer += Time.deltaTime;
+            else
+            {
+                MoveChessbotMoustache();
+                moustacheMoveTimer = 0;
+            }
+        } 
     }
 
     public void ResetGame()
@@ -74,6 +98,8 @@ public class ChessGameManager : MonoBehaviour
 
         chessboard.ClearAllHighlights();
         chessboard.moveList.Clear();
+
+        chessbotScreenRenderer.material.color = defaultScreenColour;
 
         if (isPlayerWhite)
         {
@@ -101,23 +127,21 @@ public class ChessGameManager : MonoBehaviour
         isFirstMoveMade = false;
 
         EnablePlayerInteractionWithPieces(false);
+        chessClock.EnableChessClockInteractable(false);
 
         if (isCheckmate)
             Debug.Log("Checkmate!");
 
-        if (isWhiteTeam)
+        if (isWhiteTeam == isPlayerWhite)
         {
-            // Display white team win
-            Debug.Log("White team wins!");
+            // TODO: Play victory jingle
+            chessbotScreenRenderer.material.color = winScreenColour;
         }
         else
         {
-            // Display black team win
-            Debug.Log("Black team wins!");
+            // TODO: Play defeat jingle
+            chessbotScreenRenderer.material.color = loseScreenColour;
         }
-
-        Debug.Log("White team time left: " + whiteCurrentTime);
-        Debug.Log("Black team time left: " + blackCurrentTime);
     }
 
     public void SwitchTurn()
@@ -152,6 +176,8 @@ public class ChessGameManager : MonoBehaviour
 
     private IEnumerator HandleEngineTurn()
     {
+        isMoustacheMoving = true;
+
         if (isFirstMoveMade)
             chessEngineIntegration.ProvidePlayerMove(chessboard.moveList[chessboard.moveList.Count - 1]);
         else
@@ -172,16 +198,23 @@ public class ChessGameManager : MonoBehaviour
         ChessboardSquare endSquare = nextMove[1];
 
         // Simulate engine thinking time
-        float waitTime = Random.Range(2.0f, 8.0f);
+        float waitTime = Random.Range(1.0f, 7.0f);
         yield return new WaitForSeconds(waitTime);
 
-        startSquare.pieceOnTop.SetEngineSpecialMove();
-        startSquare.pieceOnTop.MoveTo(endSquare);
+        isMoustacheMoving = false;
 
-        startSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
-        endSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
+        yield return new WaitForSeconds(1.0f);
 
-        SwitchTurn();
+        if (!isGameOver) // If Engine runs out of time, it doesn't move
+        {   
+            startSquare.pieceOnTop.SetEngineSpecialMove();
+            startSquare.pieceOnTop.MoveTo(endSquare);
+
+            startSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
+            endSquare.SetSquareHighlight(HighlightColour.EngineLastMove);
+
+            SwitchTurn();
+        }
     }
 
     public void EnablePlayerInteractionWithPieces(bool shouldEnable)
@@ -203,4 +236,16 @@ public class ChessGameManager : MonoBehaviour
             rightInteractor.interactionLayers = InteractionLayerMask.GetMask("ChessClock");
         }
     }
+
+    private void MoveChessbotMoustache()
+    {
+        if (chessbotMoustache.transform.localPosition.y == 0)
+            RaiseChessbotMoustache();
+        else if (chessbotMoustache.transform.localPosition.y == 1)
+            LowerChessbotMoustache();
+    }
+    private void RaiseChessbotMoustache() { chessbotMoustache.transform.localPosition += new Vector3(0, 1, 0); }
+    private void LowerChessbotMoustache() { chessbotMoustache.transform.localPosition -= new Vector3(0, 1, 0); }
+
+
 }
