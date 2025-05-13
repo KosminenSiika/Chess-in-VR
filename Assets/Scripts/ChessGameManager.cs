@@ -23,6 +23,8 @@ public class ChessGameManager : MonoBehaviour
     [SerializeField] private Color winScreenColour = Color.green;
     [SerializeField] private Color loseScreenColour = Color.red;
     private Color defaultScreenColour;
+    [SerializeField] private AudioSource winAudioSource;
+    [SerializeField] private AudioSource loseAudioSource;
 
     public float whiteMaxTime = 600;
     public float blackMaxTime = 600;
@@ -83,7 +85,11 @@ public class ChessGameManager : MonoBehaviour
 
     public void ResetGame()
     {
+        StopAllCoroutines();
+
         isGameOver = false;
+        isMoustacheMoving = false;
+        chessEngineIntegration.nextMoveReady = false;
         isWhiteTurn = true;
         isFirstMoveMade = false;
         isPlayerWhite = gameSettings.playerWhiteToggle.isOn;
@@ -134,12 +140,12 @@ public class ChessGameManager : MonoBehaviour
 
         if (isWhiteTeam == isPlayerWhite)
         {
-            // TODO: Play victory jingle
+            winAudioSource.Play();
             chessbotScreenRenderer.material.color = winScreenColour;
         }
         else
         {
-            // TODO: Play defeat jingle
+            loseAudioSource.Play();
             chessbotScreenRenderer.material.color = loseScreenColour;
         }
     }

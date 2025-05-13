@@ -25,6 +25,7 @@ public enum SpecialMove
 public class ChessPieceBase : MonoBehaviour
 {
     [SerializeField] private GameObject model;
+    private AudioSource audioSource;
 
     public Chessboard chessboard;
     public ChessboardSquare currentSquare;
@@ -45,6 +46,7 @@ public class ChessPieceBase : MonoBehaviour
         model.transform.Rotate(0, chessboard.transform.eulerAngles.y, 0);
         gameManager = FindFirstObjectByType<ChessGameManager>();
         chessClock = FindFirstObjectByType<ChessClock>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Interaction with player's interactors
@@ -867,6 +869,7 @@ public class ChessPieceBase : MonoBehaviour
         gameManager.EnablePlayerInteractionWithPieces(false);
 
         targetSquare.PlaceChessPiece(this);
+        audioSource.Play();
 
         chessboard.moveList.Add(new ChessboardSquare[] { currentSquare, targetSquare });
 

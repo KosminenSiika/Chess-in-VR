@@ -9,6 +9,7 @@ public class ChessClock : MonoBehaviour
     [SerializeField] private ChessGameManager gameManager;
 
     [SerializeField] private XRSimpleInteractable interactableScript;
+    [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private TextMeshProUGUI botHH;
     [SerializeField] private TextMeshProUGUI botMM;
@@ -104,6 +105,7 @@ public class ChessClock : MonoBehaviour
 
     public void EndPlayerTurn()
     {
+        audioSource.Play();
         EnableChessClockInteractable(false);
         gameManager.SwitchTurn();
     }
