@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ChessGameManager : MonoBehaviour
 {
+    [SerializeField] private Chessbot5000Settings gameSettings;
     [SerializeField] private ChessEngineIntegration chessEngineIntegration;
     [SerializeField] private Chessboard chessboard;
     private Vector3 chessboardInitialPosition;
@@ -29,8 +30,6 @@ public class ChessGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        whiteCurrentTime = whiteMaxTime;
-        blackCurrentTime = blackMaxTime;
         EnablePlayerInteractionWithPieces(false);
         chessboardInitialPosition = chessboard.transform.position;
     }
@@ -38,7 +37,7 @@ public class ChessGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!firstGameReset && Time.timeSinceLevelLoad >= 3)
+        if (!firstGameReset && Time.timeSinceLevelLoad >= 10)
         {
             firstGameReset = true;
             ResetGame();
@@ -71,10 +70,10 @@ public class ChessGameManager : MonoBehaviour
         isGameOver = false;
         isWhiteTurn = true;
         isFirstMoveMade = false;
-        // isPlayerWhite = UI element toggle value
-        // difficulty = UI element slider value
-        // whiteMaxTime = UI element slider value
-        // blackMaxTime = UI element slider value
+        isPlayerWhite = gameSettings.playerWhiteToggle.isOn;
+        difficulty = (int)gameSettings.difficultySlider.value;
+        whiteMaxTime =  (int)(gameSettings.whiteHourSlider.value * 3600 + gameSettings.whiteMinuteSlider.value * 60);
+        blackMaxTime =  (int)(gameSettings.blackHourSlider.value * 3600 + gameSettings.blackMinuteSlider.value * 60);
         whiteCurrentTime = whiteMaxTime;
         blackCurrentTime = blackMaxTime;
 
@@ -107,10 +106,6 @@ public class ChessGameManager : MonoBehaviour
     {
         isGameOver = true;
         isFirstMoveMade = false;
-
-        // TEMPORARY WHILE CHESS ENGINE ISN'T IMPLEMENTED
-        //leftInteractor.enabled = false;
-        //rightInteractor.enabled = false;
 
         EnablePlayerInteractionWithPieces(false);
 

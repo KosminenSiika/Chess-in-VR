@@ -82,19 +82,19 @@ public class ChessClock : MonoBehaviour
         int[] times = SecondsToHHMMSS(playerTime);
 
         if (times[0] < 10)
-            botHH.SetText("0" + times[0].ToString());
+            playerHH.SetText("0" + times[0].ToString());
         else
-            botHH.SetText(times[0].ToString());
+            playerHH.SetText(times[0].ToString());
 
         if (times[1] < 10)
-            botMM.SetText("0" + times[1].ToString());
+            playerMM.SetText("0" + times[1].ToString());
         else
-            botMM.SetText(times[1].ToString());
+            playerMM.SetText(times[1].ToString());
 
         if (times[2] < 10)
-            botSS.SetText("0" + times[2].ToString());
+            playerSS.SetText("0" + times[2].ToString());
         else
-            botSS.SetText(times[2].ToString());
+            playerSS.SetText(times[2].ToString());
     }
 
     public void EndPlayerTurn()
