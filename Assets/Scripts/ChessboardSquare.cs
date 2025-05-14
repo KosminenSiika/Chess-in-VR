@@ -101,7 +101,7 @@ public class ChessboardSquare : MonoBehaviour
 
         // Place piece onto square
         pieceOnTop = piece;
-        piece.transform.position = piecePlaceTransform.position;
+        piece.SetPosition(piecePlaceTransform.position);
         piece.transform.rotation = transform.localRotation;
     }
     public void EliminatePieceOnTop()

@@ -40,6 +40,10 @@ public class ChessPieceBase : MonoBehaviour
 
     private List<ChessboardSquare> availableMoves = new List<ChessboardSquare>();
 
+    private Vector3 desiredPosition;
+    private Vector3 desiredScale;
+    private bool shouldLerp = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +51,25 @@ public class ChessPieceBase : MonoBehaviour
         gameManager = FindFirstObjectByType<ChessGameManager>();
         chessClock = FindFirstObjectByType<ChessClock>();
         audioSource = GetComponent<AudioSource>();
+        desiredPosition = transform.position;
+        desiredScale = transform.localScale;
+    }
+
+    private void Update()
+    {
+        // Smooth piece movement
+        if (shouldLerp)
+        {
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 20);
+            transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, Time.deltaTime * 20);
+        }
     }
 
     // Interaction with player's interactors
     public void OnPickedUp()
     {
+        shouldLerp = false;
+
         availableMoves.Clear();
         availableMoves = GetAvailableMoves(pieceType, ref chessboard.squares);
         specialMove = GetSpecialMoves(pieceType, ref chessboard.squares, ref chessboard.moveList);
@@ -63,6 +81,8 @@ public class ChessPieceBase : MonoBehaviour
     }
     public void OnDropped()
     {
+        shouldLerp = true;
+
         if (gameManager.isGameOver)
         {
             currentSquare.PlaceChessPiece(this);
@@ -895,4 +915,17 @@ public class ChessPieceBase : MonoBehaviour
             chessClock.EnableChessClockInteractable(true);
         }
     }
+    public void SetPosition(Vector3 position, bool force = false)
+    {
+        desiredPosition = position;
+        if (force)
+            transform.position = desiredPosition;
+    }
+    public void SetScale(Vector3 scale, bool force = false)
+    {
+        desiredScale = scale;
+        if (force)
+            transform.localScale = desiredScale;
+    }
+
 }

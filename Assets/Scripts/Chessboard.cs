@@ -74,24 +74,24 @@ public class Chessboard : MonoBehaviour
     {
         activePieces.Remove(deadPiece);
         deadPiece.GetComponent<XRGrabInteractable>().interactionLayers = InteractionLayerMask.GetMask("Nothing");
-        deadPiece.transform.localScale = (Vector3.one * deadScale);
+        deadPiece.SetScale(Vector3.one * deadScale);
         deadPiece.currentSquare = null;
 
         if (deadPiece.isWhite)
         {
             deadWhitePieces.Add(deadPiece);
 
-            deadPiece.transform.position = squares[1, 8].piecePlaceTransform.position
+            deadPiece.SetPosition(squares[1, 8].piecePlaceTransform.position
                 + (gameManager.isPlayerWhite ? new Vector3(-tileSize, 0, -tileSize) : new Vector3(tileSize, 0, tileSize))
-                + (gameManager.isPlayerWhite ? Vector3.right : Vector3.left) * deathSpacing * (deadWhitePieces.Count - 1);
+                + (gameManager.isPlayerWhite ? Vector3.right : Vector3.left) * deathSpacing * (deadWhitePieces.Count - 1));
         }
         else
         {
             deadBlackPieces.Add(deadPiece);
 
-            deadPiece.transform.position = squares[8, 1].piecePlaceTransform.position
+            deadPiece.SetPosition(squares[8, 1].piecePlaceTransform.position
                 + (!gameManager.isPlayerWhite ? new Vector3(-tileSize, 0, -tileSize) : new Vector3(tileSize, 0, tileSize))
-                + (!gameManager.isPlayerWhite ? Vector3.right : Vector3.left) * deathSpacing * (deadBlackPieces.Count - 1);
+                + (!gameManager.isPlayerWhite ? Vector3.right : Vector3.left) * deathSpacing * (deadBlackPieces.Count - 1));
         }
     }
 }
